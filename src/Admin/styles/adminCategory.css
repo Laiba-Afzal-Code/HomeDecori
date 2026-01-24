@@ -1,0 +1,63 @@
+.admin-category-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+}
+
+.category-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.category-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #132b09;
+  color: #fff;
+  cursor: pointer;
+}
+
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.category-table th,
+.category-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.category-table th {
+  background: #132b09;
+  color: #fff;
+}
+
+.category-table tr:hover {
+  background: #f8f9fb;
+}
+.delete-btn {
+  padding: 6px 12px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background: darkred;
+}

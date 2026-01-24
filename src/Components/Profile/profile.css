@@ -1,0 +1,38 @@
+.profile-page {
+  max-width: 600px;
+  margin: auto;
+  padding: 100px 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.profile-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.profile-card .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.logout {
+  border: 2px solid darkgreen;
+  padding: 8px 16px;
+  color: darkgreen;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  background-color: #e1f340;
+}

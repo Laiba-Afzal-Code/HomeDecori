@@ -1,0 +1,225 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.heroR {
+  flex: 1;
+  background-color: #e1f340;
+  padding-top: 100px;
+  padding-right: 70px;
+}
+
+.imgcards {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.cardpic {
+  position: relative;
+  width: 330px;
+  height: 80%;
+  padding: 10px;
+  background: url("../../assets/herorr.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 10px solid white;
+}
+.imagecard2 {
+  width: 220px;
+  height: 40%;
+  padding: 10px;
+  background: url("../../assets/herorb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 10px solid white;
+  position: absolute;
+  bottom:  20%;
+  right: 390px;
+}
+.herol {
+  flex: 1;
+  width: 100%;
+  background-color: #132b09;
+  background: linear-gradient(
+      to bottom,
+      rgba(3, 77, 2, 0.791),
+      rgba(4, 77, 29, 0.734)
+    ),
+    url("../../assets/herol.jpg");
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.heroleft {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  padding-left: 60px;
+  max-width: 600px;
+  padding-right: 20px;
+}
+
+.ltop {
+  text-transform: uppercase;
+  font-family: "Lato";
+  font-size: 14px;
+  color: white;
+  word-spacing: 2px;
+}
+.ltop span {
+  color: #e1f340;
+}
+.herohead {
+  font-family: "Poppins";
+  font-size: 2.5rem;
+  margin: 0;
+  word-spacing: 2px;
+}
+.pegep {
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgba(255, 255, 255, 0.957);
+}
+.a {
+  text-decoration: none;
+}
+.herobtn {
+  color: #132b09;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-width: max-content;
+  padding: 6px 10px;
+  text-decoration: none;
+  background-color: #e1f340;
+  border: none;
+  cursor: pointer;
+  font-weight: 550;
+  font-size: 18px;
+  margin-top: 10px;
+  border: 2px solid #e1f340;
+}
+.herobtn:hover {
+  background-color:#e1f3405e ;
+  border: 2px solid #e1f340;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .heroR {
+    padding-top: 80px;
+    padding-right: 40px;
+  }
+
+  .heroleft {
+    padding-top: 100px;
+    padding-left: 50px;
+    gap: 0px;
+  }
+
+  .herohead {
+    font-size: 1.8rem;
+  }
+
+  .cardpic {
+    width: 260px;
+    height: 65%;
+  }
+
+  .imagecard2 {
+    width: 160px;
+    height: 30%;
+    right: 200px;
+    top: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .herol {
+    width: 100%;
+    padding-top: 150px;
+    flex: unset;
+    height: 60vh;
+  }
+
+  .heroR {
+    display: none;
+  }
+
+  .imgcards {
+    justify-content: right;
+  }
+
+  .cardpic {
+    width: 280px;
+    height: 350px;
+  }
+
+  .imagecard2 {
+    width: 200px;
+    height: 260px;
+    top: 18%;
+    left: 200px;
+    transform: translateX(-50%);
+  }
+
+  .heroleft {
+    padding-top: 100px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .herohead {
+    font-size: 1.6rem;
+  }
+
+  .pegep {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .herohead {
+    font-size: 1.4rem;
+  }
+
+  .ltop {
+    font-size: 12px;
+  }
+
+  .pegep {
+    font-size: 13px;
+  }
+
+  .herobtn {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .cardpic {
+    width: 220px;
+    height: 300px;
+  }
+
+  .imagecard2 {
+    width: 170px;
+    height: 220px;
+    top: 25%;
+    left: 100px;
+  }
+}
