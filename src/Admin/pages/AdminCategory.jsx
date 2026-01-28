@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/adminCategory.css";
 import adminAxios from "../api/adminAxios";
+import { toast } from "react-toastify";
 
 export default function AdminCategory() {
   const [categories, setCategories] = useState([]);
@@ -35,12 +36,13 @@ export default function AdminCategory() {
     );
     setCategories((prev) => [...prev, data]);
     setName("");
+    toast.success("Successfully Creating Category")
   } catch (err) {
     console.error(
       "Create category error:",
       err.response?.data?.message || err.message
-    );
-    alert(err.response?.data?.message || "Error creating category");
+    );toast.error(err.response?.data?.message ||"Error creating category")
+  
   }
 };
 
@@ -54,12 +56,13 @@ export default function AdminCategory() {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCategories((prev) => prev.filter((c) => c._id !== id));
+      toast.success("Deleted category")
     } catch (err) {
-      console.error(
+      toast.error(
         "Delete category error:",
-        err.response?.data?.message || err.message,
+       
       );
-      alert(err.response?.data?.message || "Error deleting category");
+      toast.error(err.response?.data?.message ||"Error Deleting category")
     }
   };
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createAdmin } from "../../utils/authService.js";
 import "./auth.css";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function CreateAdmin() {
   const [form, setForm] = useState({
@@ -24,6 +25,7 @@ export default function CreateAdmin() {
     try {
       await createAdmin(form);
       setMessage("Admin created successfully");
+      toast.info("Admin Created Successfully")
        navigate("/admin");
     } catch (err) {
       setMessage(err.response?.data?.message || "Failed to create admin");

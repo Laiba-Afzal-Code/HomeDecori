@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { register } from "../../utils/authService.js";
 import "./auth.css";
+import { toast } from "react-toastify";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -16,9 +17,11 @@ export default function Register() {
 
     try {
       await register({ name, email, password });
+      toast.info("Registered Successfully")
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed");
+      toast.error("Registration Failed")
     }
   };
 

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import adminAxios from "../api/adminAxios";
 import "../styles/posts.css";
+import { toast } from "react-toastify/unstyled";
 
 export default function PostList() {
   const [posts, setPosts] = useState([]);
@@ -16,10 +17,9 @@ export default function PostList() {
     try {
       const res = await adminAxios.get("/posts/getallposts");
       setPosts(res.data);
-      console.log(res.data)
       setLoading(false);
     } catch (err) {
-      console.error("Fetch posts error:", err);
+      toast.error("Fetch posts error:", err);
       setLoading(false);
     }
   };
@@ -30,8 +30,9 @@ export default function PostList() {
     try {
       await adminAxios.delete(`/posts/${id}`);
       setPosts(posts.filter((post) => post._id !== id));
+        toast.info("Deleting Post successfully")
     } catch (err) {
-      console.error("Delete error:", err);
+      toast.error("Delete error:", err);
     }
   };
 

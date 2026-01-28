@@ -63,10 +63,13 @@ const Footer = () => {
               <Link to={`/profile`}>Profile</Link>
             </li>
             <li>
-              <Link to="/contact-us">Contact</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </li>
             <li>
-              <Link to="/about-us">About</Link>
+              <Link to="/about-us">About Us</Link>
+            </li>
+             <li>
+              <Link to="/privacy-policy">Privacy Policy</Link>
             </li>
           </ul>
         </div>

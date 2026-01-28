@@ -152,7 +152,9 @@ p.p {
   .postcard {
     padding: 10px 20px;
   }
-
+.p{
+  display: none;
+}
   .cardpost {
     flex-direction: column;
     height: 100px;
@@ -172,6 +174,7 @@ p.p {
     padding: 0;
     height: 700px;
     gap: 0;
+    flex-wrap: wrap;
   }
   .cardp {
     padding: 20px;

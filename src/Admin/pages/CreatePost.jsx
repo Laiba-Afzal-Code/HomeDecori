@@ -1,6 +1,7 @@
 import PostForm from "../components/PostForm";
 import adminAxios from "../api/adminAxios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function CreatePost() {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ export default function CreatePost() {
 
     try {
       await adminAxios.post("/posts/createpost", data);
+      toast.success("Creating Post successfully")
       navigate("/admin/posts");
     } catch (err) {
       console.error("Create post error:", err);

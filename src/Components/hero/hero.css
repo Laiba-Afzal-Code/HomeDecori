@@ -31,8 +31,8 @@
   border: 10px solid white;
 }
 .imagecard2 {
-  width: 220px;
-  height: 40%;
+  width: 20%;
+  height: 50%;
   padding: 10px;
   background: url("../../assets/herorb.jpg");
   background-size: cover;
@@ -153,7 +153,7 @@
 
   .herol {
     width: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
     flex: unset;
     height: 60vh;
   }
@@ -180,7 +180,7 @@
   }
 
   .heroleft {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     text-align: center;
     align-items: center;
   }
@@ -197,7 +197,9 @@
   .herohead {
     font-size: 1.4rem;
   }
-
+.heroleft{
+  padding: 10px;
+}
   .ltop {
     font-size: 12px;
   }

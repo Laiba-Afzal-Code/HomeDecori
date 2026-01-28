@@ -6,7 +6,7 @@
   margin-bottom: 200px;
   border-radius: 22px;
   position: absolute;
-  top: -200px;
+  top: -230px;
   margin: 0 auto;
   left: 0px;
   right: 0px;
@@ -59,4 +59,10 @@
   font-family: "Lato";
   font-size: 18px;
   font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  .newsletter{
+    padding: 20px;
+  }
 }

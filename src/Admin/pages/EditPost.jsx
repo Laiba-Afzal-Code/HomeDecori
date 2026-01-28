@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import PostForm from "../components/PostForm.jsx";
 import adminAxios from "../api/adminAxios.js";
+import { toast } from "react-toastify";
 
 export default function EditPost() {
   const { id } = useParams(); // get post id from URL
@@ -35,6 +36,7 @@ export default function EditPost() {
       });
 
       await adminAxios.put(`/posts/${id}`, data);
+        toast.success("Update Post successfully")
       navigate("/admin/posts"); // go back to post list
     } catch (error) {
       console.error("Error updating post:", error);

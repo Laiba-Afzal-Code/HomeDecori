@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../../utils/authService.js";
 import "./auth.css";
 
+import { toast } from "react-toastify";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,11 +22,14 @@ export default function Login() {
       localStorage.setItem("user", JSON.stringify(res.data.user));
       if (res.data.user.role === "admin") {
         navigate("/admin");
+        toast.info("Admin Login Successfully");
       } else {
         navigate("/");
+        toast.info("User Login Successfully");
       }
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
+      toast.error("Login Failed");
     } finally {
       setLoading(false);
     }

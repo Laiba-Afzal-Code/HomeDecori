@@ -14,10 +14,12 @@ import AllBlogs from "./Pages/AllBlogs/AllBlogs.jsx";
 import Contact from "./Pages/Contact/Contact.jsx";
 import About from "./Pages/Contact/About.jsx";
 import SearchResults from "./Components/Minicompo/Navbar/SearchResults.jsx";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
-
   //  function AdminRoute({ children }) {
   // const isAdmin = localStorage.getItem("adminToken");
   // return isAdmin ? children : <Navigate to="/admin/login" />;
@@ -30,20 +32,22 @@ function App() {
     <>
       <div className="app">
         {/* <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
-
+        <ToastContainer />
         <Routes>
           <Route
             path="posts/:id/open/live/homedecorim/:slug"
             element={<BlogOpen />}
           />
           <Route path="/" element={<Home />} />
-           <Route path="/search" element={<SearchResults />} />
+          <Route path="/search" element={<SearchResults />} />
           <Route path="/author/:authorId" element={<Author />} />
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/category/:category" element={<CategoryPosts />} />
           <Route path="/login" element={<Login />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
           <Route
             path="/profile"
             element={
