@@ -12,9 +12,9 @@ body {
 /* PAGE LAYOUT */
 .blogOpenPage {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   padding: clamp(40px, 60vw 80px);
-  padding: 100px;
+  padding: 100px 60px;
   /* max-width: 1500px; */
   margin: 0 auto;
   overflow-x: hidden;
@@ -26,7 +26,7 @@ body {
   min-width: 0; /* critical for flex overflow */
 }
 .category{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #132b09;
   cursor: pointer;
@@ -36,8 +36,10 @@ body {
 .blogTitle {
   font-size: 3rem;
   color: #132b09;
-  font-family: "Poppins","Lato", sans-serif;
+  color: black;
+  font-family: "Lato", sans-serif;
   word-wrap: break-word;
+  font-weight: 700;
 }
 
 .blogMeta {
@@ -47,6 +49,11 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   font-family: "Lato", "Poppins", sans-serif;
+}
+.metablog{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .blogImg {

@@ -64,6 +64,9 @@ export default function Login() {
         <span onClick={() => navigate("/register")} className="auth-link">
           Create user account
         </span>
+        <span onClick={() => navigate("/")} className="auth-link">
+         Back to Home
+        </span>
       </form>
     </div>
   );

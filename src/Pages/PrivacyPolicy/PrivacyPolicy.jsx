@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
     <div className="privacy-container">
       <div className="privacy-card">
         <h1>Privacy Policy</h1>
-        <p className="last-updated">Last updated: January 2026</p>
+        <p className="last-updated">Last updated: February 2026</p>
 
         <section>
           <h2>Introduction</h2>
@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, you can contact
             us at:
             <br />
-            <strong>Email:</strong> support@homedecorblog.com
+            <strong>Email:</strong> support@homedecorimblog.com
           </p>
         </section>
       </div>

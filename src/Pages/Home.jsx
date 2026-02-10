@@ -11,6 +11,7 @@ import Testimonials from "../Components/Testimonial/Testimonial.jsx";
 import Services from "../Components/Services/Services.jsx";
 import CardBlog from "../Components/Minicompo/BlogCard/CardBlog.jsx";
 import LatestCard from "../Components/PostCard/LatestCard.jsx";
+import HomeCategoryShowcase from "./HomeCategoryShowcase/HomeCategoryShowcase.jsx";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,6 +28,7 @@ const Home = () => {
         <BlogCard />
         <PostCard />
         <Testimonials />
+        <HomeCategoryShowcase/>
         <CardBlog />
         <LatestCard />
         <Services />

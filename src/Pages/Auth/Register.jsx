@@ -60,6 +60,9 @@ export default function Register() {
         <span onClick={() => navigate("/login")} className="auth-link">
           Back to login
         </span>
+          <span onClick={() => navigate("/")} className="auth-link">
+         Back to Home
+        </span>
       </form>
     </div>
   );

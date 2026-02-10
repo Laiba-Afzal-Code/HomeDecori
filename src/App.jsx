@@ -18,6 +18,7 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import HomeCategoryShowcase from "./Pages/HomeCategoryShowcase/HomeCategoryShowcase.jsx";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   //  function AdminRoute({ children }) {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+           <Route path="/categorylist" element={<HomeCategoryShowcase />} />
 
           <Route
             path="/profile"
