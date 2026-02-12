@@ -66,6 +66,15 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
                 Blogs
               </NavLink>
             </li>
+            <li className="navli">
+              <NavLink
+                to="/texteditor"
+                className="anav"
+                onClick={() => setMenuOpen(false)}
+              >
+                TextEditor
+              </NavLink>
+            </li>
           </ul>
 
           <div className="navbtn">

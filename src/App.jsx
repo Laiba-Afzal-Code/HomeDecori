@@ -15,10 +15,11 @@ import Contact from "./Pages/Contact/Contact.jsx";
 import About from "./Pages/Contact/About.jsx";
 import SearchResults from "./Components/Minicompo/Navbar/SearchResults.jsx";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
-
+import {PageLoader} from '../src/utils/loading.jsx'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import HomeCategoryShowcase from "./Pages/HomeCategoryShowcase/HomeCategoryShowcase.jsx";
+import TextEditor from "./Pages/TextEditor/TextEditor.jsx";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   //  function AdminRoute({ children }) {
@@ -48,7 +49,10 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/loder" element={<PageLoader/>}/>
            <Route path="/categorylist" element={<HomeCategoryShowcase />} />
+           
+           <Route path="/texteditor" element={<TextEditor />} />
 
           <Route
             path="/profile"

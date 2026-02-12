@@ -37,8 +37,75 @@ const About = () => {
             marketing solutions for decor brands, startups, and creators.
           </p>
         </div>
+      </section> 
+ <div className="about-page">
+
+      {/* Hero Section */}
+      <section className="about-hero">
+        <h1>About Our Text Editor</h1>
+        <p>
+          We build powerful, modern, and easy-to-use text editing tools
+          designed to boost productivity and simplify document creation.
+        </p>
       </section>
 
+      {/* Who We Are */}
+      <section className="about-section">
+        <div className="about-container">
+          <h2>Who We Are</h2>
+          <p>
+            Our platform was created to provide a professional online text editor
+            that combines simplicity with powerful features. Whether you're a student,
+            writer, developer, or professional, our editor helps you write, edit,
+            format, and export your content with ease.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="about-cards">
+        <div className="card">
+          <h3>Our Mission</h3>
+          <p>
+            To make text editing simple, fast, and accessible for everyone.
+            We focus on clean design, powerful tools, and seamless user experience.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3>Our Vision</h3>
+          <p>
+            To become a complete productivity platform that empowers creators,
+            students, and professionals worldwide with modern digital tools.
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="about-features">
+        <h2>What We Offer</h2>
+        <div className="features-grid">
+          <div className="feature-box">Uppercase & Lowercase Conversion</div>
+          <div className="feature-box">Bold, Italic & Font Styling</div>
+          <div className="feature-box">Undo / Redo Functionality</div>
+          <div className="feature-box">Remove Extra Spaces & Cleanup</div>
+          <div className="feature-box">Word & Character Count</div>
+          <div className="feature-box">Export as PDF, TXT & DOCX</div>
+          <div className="feature-box">Live Preview</div>
+          <div className="feature-box">Keyboard Shortcuts</div>
+        </div>
+      </section>
+
+      {/* Closing Section */}
+      <section className="about-footer">
+        <h2>Our Commitment</h2>
+        <p>
+          We are committed to continuous innovation, performance optimization,
+          and delivering secure, reliable tools that enhance your productivity.
+        </p>
+      </section>
+
+    </div>
       {/* SERVICE CARDS */}
       <section className="about-cards">
         <div className="about-card">

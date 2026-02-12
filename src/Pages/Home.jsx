@@ -12,6 +12,7 @@ import Services from "../Components/Services/Services.jsx";
 import CardBlog from "../Components/Minicompo/BlogCard/CardBlog.jsx";
 import LatestCard from "../Components/PostCard/LatestCard.jsx";
 import HomeCategoryShowcase from "./HomeCategoryShowcase/HomeCategoryShowcase.jsx";
+import EditorHeroSection from "../Components/EditorFeatureCard/EditorHeroSection.jsx";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,6 +28,7 @@ const Home = () => {
         <Catenavbar />
         <BlogCard />
         <PostCard />
+        <EditorHeroSection/>
         <Testimonials />
         <HomeCategoryShowcase/>
         <CardBlog />

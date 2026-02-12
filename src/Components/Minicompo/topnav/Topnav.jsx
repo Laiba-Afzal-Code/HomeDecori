@@ -28,7 +28,7 @@ const Topnav = () => {
           <div className="socilicon">
             <Link
               target="blank"
-              to={"https://www.linkedin.com/company/106890156/admin/dashboard/"}
+              to={"https://www.linkedin.com/showcase/111764115/admin/dashboard/"}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -24,9 +24,10 @@ const services = [
   {
     id: 4,
     icon: <FaPenNib />,
-    title: "Decor Blog & Guides",
-    desc: "Well-researched articles, trends, and step-by-step décor guides.",
+    title: "Text Editing Tool",
+    desc: "A powerful yet easy-to-use text editor built for speed and style all in one place.",
   },
+
 ];
 
 export default function Services() {

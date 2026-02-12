@@ -82,13 +82,14 @@
 .about-social {
   padding: 70px 20px;
   text-align: center;
-  background-color: #132b09;
+  background: #24407d;
   color: #fff;
 }
 
 .about-social h2 {
   font-size: 30px;
   margin-bottom: 10px;
+  color: white;
 }
 
 .about-social p {
@@ -115,4 +116,129 @@
 
 .social-links a:hover {
   background: #ddd;
+}
+
+.about-page {
+  font-family: "Segoe UI", sans-serif;
+  color: #1f2937;
+}
+
+/* Hero Section */
+.abouthero {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* General Section */
+.about-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  background: #f9fafb;
+}
+
+.about-container {
+  max-width: 900px;
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+.about-container p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Mission & Vision Cards */
+.aboutcards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.card {
+  background: #f3f4f6;
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+/* Features Section */
+.about-features {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9fafb;
+}
+
+.about-features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.feature-box:hover {
+  background: #1b6a41;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Footer Section */
+.about-footer {
+  padding: 80px 20px;
+  text-align: center;
+  background: #24407d;
+  color: white;
+}
+
+.about-footer h2 {
+  margin-bottom: 20px;
+  color: white;
 }
