@@ -7,9 +7,11 @@ import authRoutes from "./routes/authRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import aiimageRoutes from "./routes/aiimageRoutes.js";
 import commentRoutes from "./routes/commentRoutes.js";
 import { upload } from "./middleware/uploadMiddleware.js";
 import contactRoutes from "./routes/contactRoute.js";
+
 dotenv.config();
 connectDB();
 const app = express();
@@ -34,6 +36,11 @@ app.post("/upload", upload.single("image"), (req, res) => {
     filename: req.file.filename,
   });
 });
+app.get("/api/test", (req,res)=>{
+res.send("API working");
+});
+// AI Room Design route
+app.use("/api", aiimageRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/comment", commentRoutes);

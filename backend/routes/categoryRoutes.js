@@ -17,3 +17,4 @@ router.post("/createcate", protect, adminOnly, createCategory);
 router.delete("/:id", protect, adminOnly, deleteCategory);
 
 export default router;
+
