@@ -5,6 +5,7 @@ import { Document, Packer, Paragraph } from "docx";
 import { saveAs } from "file-saver";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
+import ImageEditor from "../../Components/ImageEditor/ImageEditor";
 
 const TextEditor = () => {
   const [text, setText] = useState("");
@@ -113,8 +114,10 @@ const TextEditor = () => {
 
   return (
     <>
+
     <Navbar/>
     <div className="editor-container">
+    <h1>Welcome to the Homedecorim tool. We're glad to see you here. Enjoy it</h1>
       <h2>Full-Featured Text Editor</h2>
 
       {/* Font & color controls */}
@@ -194,6 +197,70 @@ const TextEditor = () => {
           {text || "Nothing to preview..."}
         </div>
       </div>
+    <ImageEditor/>
+    <div className="tools-container">
+
+      <h1 className="tools-title">Online Editing Tools</h1>
+      <p className="tools-intro">
+        Our platform provides powerful and easy-to-use online editing tools 
+        designed for creators, bloggers, and professionals. These tools help 
+        users edit images, write content, and optimize files quickly without 
+        installing any software.
+      </p>
+
+      <div className="tool-card">
+
+        <h2>Image Editor</h2>
+
+        <p>
+          The Image Editor allows users to upload and modify images directly 
+          in the browser. It provides features such as format conversion, 
+          image compression, and basic editing tools. This makes it perfect 
+          for bloggers, designers, and content creators who need quick image 
+          optimization.
+        </p>
+
+        <ul>
+          <li>Convert images to different formats (JPG, PNG, WEBP)</li>
+          <li>Compress images to reduce file size</li>
+          <li>Download optimized images instantly</li>
+          <li>Convert images to PDF format</li>
+          <li>Preview images before downloading</li>
+        </ul>
+
+        <p>
+          The tool is fully browser-based, meaning your files stay secure 
+          and are not stored on any external servers.
+        </p>
+
+      </div>
+
+      <div className="tool-card">
+
+        <h2>Text Editor</h2>
+
+        <p>
+          The Text Editor is a simple yet powerful writing tool that helps 
+          users create, edit, and format text easily. It is ideal for writing 
+          blog posts, notes, or preparing content for websites and documents.
+        </p>
+
+        <ul>
+          <li>Write and edit text in a clean interface</li>
+          <li>Format text with headings, lists, and styles</li>
+          <li>Copy or download written content</li>
+          <li>Useful for bloggers and content creators</li>
+          <li>Fast and distraction-free writing environment</li>
+        </ul>
+
+        <p>
+          The editor provides a smooth writing experience and helps users 
+          focus on content creation without unnecessary distractions.
+        </p>
+
+      </div>
+
+    </div>
     </div>
     <Footer/>
     </>

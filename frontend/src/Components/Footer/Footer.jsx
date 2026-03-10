@@ -69,8 +69,9 @@ const Footer = () => {
               <Link to="/about-us">About Us</Link>
             </li>
             <li>
-              <Link to="/texteditor">Text Editor</Link>
+              <Link to="/texteditor">Editor Tool</Link>
             </li>
+           
              <li>
               <Link to="/afterbeforeview">Ai Room</Link>
             </li>
@@ -87,10 +88,10 @@ const Footer = () => {
         <div className="hd-footer-section">
           <h3>Decor Styles</h3>
           {categories.length > 0 ? (
-            categories.slice(0, 5).map((cat) => (
+            categories.slice(0, 7).map((cat) => (
               <ul>
-                <li>
-                  <Link to={`/category/${cat.slug}`} key={cat._id}>
+                <li key={cat.id}>
+                  <Link to={`/category/${cat.slug}`} >
                     {cat.name}
                   </Link>
                 </li>

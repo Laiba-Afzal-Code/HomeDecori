@@ -26,13 +26,13 @@ body {
   flex: 3;
   min-width: 0; /* critical for flex overflow */
 }
-.category{
+.category {
   font-size: 18px;
   font-weight: 600;
   color: #132b09;
   cursor: pointer;
   font-family: "Lato", sans-serif;
- text-transform: uppercase;
+  text-transform: uppercase;
 }
 .blogTitle {
   font-size: 3rem;
@@ -42,19 +42,18 @@ body {
   word-wrap: break-word;
   font-weight: 700;
   margin: 0;
-
 }
-.comenticon{
+.comenticon {
   position: relative;
-
 }
-.commentslength{
+.commentslength {
   position: absolute;
-  top: -6px;
+  top: -8px;
+  right: -5px;
   color: rgb(3, 138, 3);
   font-weight: bold;
-  background-color: #c4e7b682;
-  right: 2px;margin: 0;
+  /* background-color: #c4e7b682; */
+  margin: 0;
   z-index: inherit;
 }
 
@@ -66,7 +65,7 @@ body {
   gap: 10px;
   font-family: "Lato", "Poppins", sans-serif;
 }
-.metablog{
+.metablog {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -22,9 +22,9 @@ const ABview = () => {
         <section className="slider-section">
           <h1 className="section-title">Before & After Room Transformation</h1>
           <div className="before-after-wrapper">
-            <img src={beforeImg} alt="Before Room" className="before-img" />
+            <img src={afterImg} alt="Before Room" className="before-img" />
             <img
-              src={afterImg}
+              src={beforeImg}
               alt="After Room"
               className="after-img"
               style={{ width: `${sliderPosition}%` }}
@@ -49,15 +49,15 @@ const ABview = () => {
             harmonious layouts, any room can become a peaceful sanctuary.
           </p>
           <div className="info-cards">
-            <div className="card">
+            <div className="cardt">
               <h3>Modern Wall Design</h3>
               <p>Use textures, accent walls, and color palettes to create visual depth and style.</p>
             </div>
-            <div className="card">
+            <div className="cardt">
               <h3>Peaceful Layout</h3>
               <p>Minimal furniture and organized space promote relaxation and focus.</p>
             </div>
-            <div className="card">
+            <div className="cardt">
               <h3>Inspired Living</h3>
               <p>Your surroundings influence your mind—curate a space that nurtures creativity and calm.</p>
             </div>
@@ -68,7 +68,7 @@ const ABview = () => {
           </p>
         </section>
 
-<AIRoomDesigner/>
+{/* <AIRoomDesigner/> */}
 <section className="decor-explain">
       <div className="decor-container">
 

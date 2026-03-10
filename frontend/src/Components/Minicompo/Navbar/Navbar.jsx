@@ -72,7 +72,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
                 className="anav"
                 onClick={() => setMenuOpen(false)}
               >
-                TextEditor
+                Editor
               </NavLink>
             </li>
           </ul>
