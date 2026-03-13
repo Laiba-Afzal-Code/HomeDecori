@@ -4,6 +4,8 @@ import userAxios from "../../utils/userAxios";
 import "./profile.css";
 import Navbar from "../Minicompo/Navbar/Navbar";
 import Footer from "../Footer/Footer";
+
+import { FaHome, FaCouch, FaChair, FaBlogger } from "react-icons/fa";
 export default function Profile() {
   const [user, setUser] = useState(null);
 
@@ -37,6 +39,12 @@ export default function Profile() {
     <>
       <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <div className="profile-page">
+          <div className="floating-icons">
+                <FaCouch className="icon couch" />
+                <FaChair className="icon chair" />
+                <FaHome className="icon homeIcon" />
+                <FaBlogger className="icon blogicon"/>
+              </div>
         <h2>Profile</h2>
         <div className="profile-card">
           <img

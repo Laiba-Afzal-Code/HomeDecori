@@ -23,13 +23,12 @@ import TextEditor from "./Pages/TextEditor/TextEditor.jsx";
 import ImageEditor from "./Components/ImageEditor/ImageEditor.jsx";
 import ABview from "./Pages/ABview/ABview.jsx";
 import WriteWithUs from "./Pages/Contact/WriteUs.jsx";
+import NotFound from "./Pages/NotFound/NotFound.jsx";
+import BlogRequest from "./Pages/BlogRequest/BlogRequest.jsx";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
-  //  function AdminRoute({ children }) {
-  // const isAdmin = localStorage.getItem("adminToken");
-  // return isAdmin ? children : <Navigate to="/admin/login" />;
-  // }
+
   const PrivateRoute = ({ children }) => {
     const token = localStorage.getItem("token");
     return token ? children : <Navigate to="/login" replace />;
@@ -37,7 +36,6 @@ function App() {
   return (
     <>
       <div className="app">
-        {/* <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> */}
         <ToastContainer />
 
         <Routes>
@@ -58,9 +56,9 @@ function App() {
           <Route path="/categorylist" element={<HomeCategoryShowcase />} />
           <Route path="/write-with-us" element={<WriteWithUs />} />
           <Route path="/texteditor" element={<TextEditor />} />
-
           <Route path="/afterbeforeview" element={<ABview />} />
           <Route path="/imageeditortool" element={<ImageEditor />} />
+          <Route path="blogrequest" element={<BlogRequest />} />
           <Route
             path="/profile"
             element={
@@ -71,7 +69,11 @@ function App() {
           />
           <Route path="/register" element={<Register />} />
           <Route path="/testimonial" element={<Testimonials />} />
-          <Route path="/*" element={<AdminRoutes />} />
+          {/* Admin routes */}
+          <Route path="/admin/*" element={<AdminRoutes />} />
+
+          {/* 404 page */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </>

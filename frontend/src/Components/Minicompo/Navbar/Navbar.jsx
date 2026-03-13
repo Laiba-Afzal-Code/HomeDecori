@@ -83,7 +83,9 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search Decorim"
             />
-
+            <Link to={"/blogrequest"} className="a">
+              <button className="navb">Decorim</button>
+            </Link>
             {user ? (
               <Link to={"/profile"} className="user">
                 <img src={userimg} alt="user" className="userimg" width={50} />

@@ -3,6 +3,13 @@ import "./contact.css";
 import userAxios from "../../utils/userAxios";
 import Navbar from '../../Components/Minicompo/Navbar/Navbar.jsx';
 import Footer from '../../Components/Footer/Footer.jsx';
+import {
+  FaHome,
+  FaCouch,
+  FaChair,
+ 
+  FaBlogger,
+} from "react-icons/fa";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -38,7 +45,12 @@ const Contact = () => {
     <>
     <Navbar/>
     <div className="contact">
-
+     <div className="floating-icons">
+                      <FaCouch className="icon couch" />
+                      <FaChair className="icon chair" />
+                      <FaHome className="icon homeIcon" />
+                       <FaBlogger className="icon blogicon"/>
+                    </div>
       <div className="contact-container">
         <h2>Contact Us</h2>
 

@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
 import "./hero.css";
+import {
+  FaHome,
+  FaCouch,
+  FaChair,
+ 
+  FaBlogger,
+} from "react-icons/fa";
 const Hero = () => {
   return (
     <>
       <div className="hero">
+         <div className="floating-icons">
+                      <FaCouch className="icon couch" />
+                      <FaChair className="icon chair" />
+                      <FaHome className="icon homeIcon" />
+                       <FaBlogger className="icon blogicon"/>
+                    </div>
         <div className="herol">
           <div className="heroleft">
             <span className="ltop"><span>100%</span> Meaningful ideas, simple tips, and thoughtful advice</span>

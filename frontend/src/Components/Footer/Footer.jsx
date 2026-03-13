@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 import Topnav from "../Minicompo/topnav/Topnav";
 import { useEffect, useState } from "react";
 import userAxios from "../../utils/userAxios";
+
+import {
+  FaHome,
+  FaCouch,
+  FaChair,
+ 
+  FaBlogger,
+} from "react-icons/fa";
 const Footer = () => {
   const [categories, setCategories] = useState([]);
   const fetchCategories = async () => {
@@ -16,9 +24,8 @@ const Footer = () => {
         ? res.data
         : res.data.categories || [];
       setCategories(postsArray);
-      console.log("API DATA:", res.data);
+      // console.log("API DATA:", res.data);
 
-      console.log(postsArray);
     } catch (err) {
       console.error(
         "Fetch categories error:",
@@ -31,6 +38,12 @@ const Footer = () => {
   }, []);
   return (
     <footer className="hd-footer">
+        <div className="floating-icons">
+              <FaCouch className="icon couch" />
+              <FaChair className="icon chair" />
+              <FaHome className="icon homeIcon" />
+               <FaBlogger className="icon blogicon"/>
+            </div>
       <div className="hd-footer-container">
         <Newsletter />
         {/* Brand */}
@@ -90,8 +103,8 @@ const Footer = () => {
           {categories.length > 0 ? (
             categories.slice(0, 7).map((cat) => (
               <ul>
-                <li key={cat.id}>
-                  <Link to={`/category/${cat.slug}`} >
+                <li>
+                  <Link to={`/category/${cat.slug}`}  key={cat._id}>
                     {cat.name}
                   </Link>
                 </li>

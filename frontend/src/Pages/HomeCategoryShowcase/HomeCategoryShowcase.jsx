@@ -3,6 +3,7 @@ import axios from "../../utils/userAxios";
 import "./HomeCategoryShowcase.css";
 import { Link, useParams } from "react-router-dom";
 import cleanText from "../../utils/cleanText";
+import { toast } from "react-toastify";
 
 export default function HomeCategoryShowcase() {
   const [categories, setCategories] = useState([]);
@@ -32,14 +33,12 @@ export default function HomeCategoryShowcase() {
             `/posts/category/${cat.slug}?limit=5`,
           );
 
-          console.log("Posts for", cat.name, data);
-
           setPosts((prev) => ({
             ...prev,
             [cat.slug]: data,
           }));
         } catch (err) {
-          console.error("Error fetching posts for category", cat.name, err);
+          toast.error("Error fetching posts for category", cat.name, err);
         }
       }
     };

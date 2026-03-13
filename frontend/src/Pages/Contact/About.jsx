@@ -1,12 +1,25 @@
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import "./About.css";
+import {
+  FaHome,
+  FaCouch,
+  FaChair,
+ 
+  FaBlogger,
+} from "react-icons/fa";
 
 const About = () => {
   return (
     <>
     <Navbar/>
     <div className="about-page">
+           <div className="floating-icons">
+                            <FaCouch className="icon couch" />
+                            <FaChair className="icon chair" />
+                            <FaHome className="icon homeIcon" />
+                             <FaBlogger className="icon blogicon"/>
+                          </div>
 
       {/* HERO SECTION */}
       <section className="about-hero">

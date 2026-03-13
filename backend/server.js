@@ -11,7 +11,7 @@ import aiimageRoutes from "./routes/aiimageRoutes.js";
 import commentRoutes from "./routes/commentRoutes.js";
 import { upload } from "./middleware/uploadMiddleware.js";
 import contactRoutes from "./routes/contactRoute.js";
-
+import blogRoutes  from "./routes/blogRoutes.js";
 dotenv.config();
 connectDB();
 const app = express();
@@ -50,6 +50,8 @@ app.use("/api/comment", commentRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/categories", categoryRoutes);
+
+app.use("/api/blog",blogRoutes);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () =>

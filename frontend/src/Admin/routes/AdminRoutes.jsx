@@ -8,6 +8,7 @@ import Users from "../pages/Users";
 import AdminCategory from "../pages/AdminCategory";
 import AdminSettings from "../pages/AdminSettings";
 import CreateAdmin from "../../Pages/Auth/CreateAdmin";
+import NotFound from "../../Pages/NotFound/NotFound";
 
 export default function AdminRoutes() {
   return (
@@ -15,7 +16,7 @@ export default function AdminRoutes() {
     
     <Routes>
       {/* ADMIN LAYOUT */}
-      <Route path="/admin" element={<AdminLayout />}>
+      <Route path="/" element={<AdminLayout />}>
         {/* DEFAULT PAGE → /admin */}
         <Route index element={<Dashboard />} />
 
@@ -28,7 +29,8 @@ export default function AdminRoutes() {
           <Route path="create-admin" element={<CreateAdmin />} />
           <Route path="categories" element={<AdminCategory />} />
            <Route path="settings" element={<AdminSettings />} />
-          
+           {/* 404 page */}
+                    <Route path="*" element={<NotFound />} />
       </Route>
     
     </Routes>

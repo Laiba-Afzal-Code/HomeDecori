@@ -10,6 +10,9 @@ const WriteWithUs = () => {
   const goToContact = () => {
     navigate("/contact-us");
   };
+    const goTodecorim = () => {
+    navigate("/blogrequest");
+  };
 
   return (
     <>
@@ -40,6 +43,9 @@ const WriteWithUs = () => {
 
             <button className="contact-btn" onClick={goToContact}>
               Contact Us to Write
+            </button>
+             <button className="contact-btn" onClick={goTodecorim}>
+              Write your Blog Ideas
             </button>
           </div>
 

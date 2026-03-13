@@ -1,0 +1,140 @@
+.notfound {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0f2f1, #f5f5f5);
+  font-family: sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.notfound.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  width: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.code {
+  font-size: 120px;
+  font-weight: 800;
+  color: #2e7d32;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.dark p {
+  color: #ddd;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.backBtn,
+.homeBtn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.backBtn {
+  background: #ddd;
+}
+
+.homeBtn {
+  background: #2e7d32;
+  color: white;
+}
+
+.homeBtn:hover {
+  background: #1b5e20;
+}
+
+/* Floating Icons */
+
+.floating-icons .icon {
+  position: absolute;
+  font-size: 40px;
+  opacity: 0.2;
+  animation: float 6s infinite ease-in-out;
+}
+
+.couch {
+  top: 20%;
+  left: 15%;
+}
+.blogicon {
+  top: 70%;
+  left: 16%;
+}
+
+.chair {
+  bottom: 20%;
+  right: 15%;
+}
+
+.homeIcon {
+  top: 20%;
+  right: 20%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Theme Button */
+
+.themeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: white;
+}
+
+.dark .themeBtn {
+  background: #333;
+  color: white;
+}

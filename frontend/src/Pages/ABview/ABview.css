@@ -82,7 +82,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.info-section h2 {
+.info-section .h2 {
   color: #006400;
   text-align: center;
   margin-bottom: 1.5rem;

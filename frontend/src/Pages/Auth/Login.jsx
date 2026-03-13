@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../../utils/authService.js";
 import "./auth.css";
 
+import { FaHome, FaCouch, FaChair, FaArrowLeft, FaBlogger } from "react-icons/fa";
 import { toast } from "react-toastify";
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -37,6 +38,12 @@ export default function Login() {
 
   return (
     <div className="auth-container">
+ <div className="floating-icons">
+        <FaCouch className="icon couch" />
+        <FaChair className="icon chair" />
+        <FaHome className="icon homeIcon" />
+         <FaBlogger className="icon blogicon"/>
+      </div>
       <form className="auth-card" onSubmit={handleSubmit}>
         <h2>Admin / User Login</h2>
         {error && <div className="auth-error">{error}</div>}

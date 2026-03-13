@@ -34,6 +34,7 @@ export default function CreateAdmin() {
 
   return (
     <div className="auth-container">
+     
       <form className="auth-card" onSubmit={handleSubmit}>
         <h2>Create Admin</h2>
 
