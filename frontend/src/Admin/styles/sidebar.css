@@ -1,0 +1,38 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding: 30px 20px;
+}
+.logoadmin {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap: 0;
+}
+.sidebar h1 {
+  margin: 0;
+  font-family: "Poppins";
+  color: #e1f340;
+
+}
+
+.sidebar a {
+  display: block;
+  color: #cbd5f5;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Lato";
+  font-weight: 600;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #132b09;
+  color: white;
+}

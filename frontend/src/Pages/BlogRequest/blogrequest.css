@@ -1,0 +1,58 @@
+.editorPage{
+min-height:100vh;
+background:#f5f7fa;
+display:flex;
+justify-content:center;
+padding: 100px 40px;
+}
+
+.editorCard{
+width:900px;
+background:rgb(188, 187, 187);
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+.editorCard .h2{
+margin-bottom:20px;
+color:#2e7d32;
+}
+.formblog{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input.inputblog , select.selectblog{
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+outline: none;
+}
+
+
+.imagePreview{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+.publishBtn{
+padding:14px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+.publishBtn:hover{
+background:#1b5e20;
+}
+
+.readingTime{
+font-size:14px;
+color:#777;
+}

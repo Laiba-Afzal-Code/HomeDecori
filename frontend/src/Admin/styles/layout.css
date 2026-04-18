@@ -1,0 +1,15 @@
+.admin {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-main {
+  margin-left: 260px; /* MUST match sidebar width */
+  width: calc(100% - 260px);
+}
+
+.admin-content {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: calc(100vh - 60px);
+}

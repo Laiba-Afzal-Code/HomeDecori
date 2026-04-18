@@ -1,0 +1,120 @@
+/* ===============================
+   Top Navigation (Desktop)
+================================ */
+.topnav {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #132b09;
+  padding: 0 50px;
+  background: #e1f340;
+}
+
+/* Social Icons */
+.navsocial {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.socilicon {
+  position: relative;
+  padding: 0 10px;
+}
+
+.socilicon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5px;
+  height: 20px;
+  background-color: #132b09;
+}
+
+/* Contact Nav */
+.connav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+}
+
+.connav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5px;
+  height: 20px;
+  background-color: #132b09;
+}
+
+.conp {
+  margin: 0;
+  font-size: 16px;
+  color: #132b09;
+  font-family: "Lato";
+  font-weight: 500;
+}
+
+/* ===============================
+   Tablet (≤ 1024px)
+================================ */
+@media (max-width: 1024px) {
+  .topnav {
+    padding: 0 30px;
+  }
+
+  .conp {
+    font-size: 15px;
+  }
+}
+
+/* ===============================
+   Mobile (≤ 768px)
+================================ */
+@media (max-width: 968px) {
+  .topnav {
+    height: auto;
+    padding: 6px 20px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .navsocial {
+    justify-content: center;
+  }
+
+  .connav {
+    padding: 0 6px;
+  }
+
+  .connav::after,
+  .socilicon::before {
+    display: none;
+  }
+
+  .conp {
+    font-size: 14px;
+  }
+}
+
+/* ===============================
+   Small Mobile (≤ 480px)
+================================ */
+@media (max-width: 480px) {
+  .topnav {
+    padding: 6px 12px;
+  }
+
+  .conp {
+    font-size: 13px;
+  }
+
+  .socilicon {
+    padding: 0 6px;
+  }
+}

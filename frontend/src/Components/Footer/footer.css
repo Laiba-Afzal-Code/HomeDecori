@@ -1,0 +1,90 @@
+.hd-footer {
+  background: #ffffff;
+  color: #132b09;
+  padding: 100px 20px 20px;
+  margin-top: 100px;
+  font-family: "Poppins", sans-serif;
+  background-color: #e1f340;
+  position: relative;
+}
+
+.hd-footer-container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: 50px;
+  padding: 100px 0px;
+}
+
+/* Brand */
+.hd-footer-brand h2 {
+  font-size: 2rem;
+  color: #132b09;
+  margin-bottom: 12px;
+}
+
+.hd-footer-brand p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: 132b09;
+}
+
+/* Sections */
+.hd-footer-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #132b09;
+}
+
+.hd-footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hd-footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.hd-footer-section ul li a {
+  text-decoration: none;
+  color: #132b09;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.hd-footer-section ul li a:hover {
+  color: #132b09;
+}
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+}
+
+/* Bottom */
+.hd-footer-bottom {
+  /* border-top: 1px solid #132b09; */
+  /* margin: 50px; */
+  padding-top: 18px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #132b09;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hd-footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hd-footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
