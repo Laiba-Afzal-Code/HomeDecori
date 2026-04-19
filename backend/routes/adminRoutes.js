@@ -1,5 +1,5 @@
 import express from "express";
-import { getAllUsers, getDashboardStats } from "../controllers/adminController.js";
+import { deleteUser, getAllUsers, getDashboardStats } from "../controllers/adminController.js";
 import  protect from "../middleware/authMiddleware.js";
 import { adminOnly } from "../middleware/adminMiddleware.js";
 
@@ -17,5 +17,7 @@ router.get(
 
 // GET /api/admin/users
 router.get("/users", protect, adminOnly, getAllUsers);
-
+// DELETE USER / ADMIN
+router.delete("/user/:id", protect, adminOnly, deleteUser);
 export default router;
+

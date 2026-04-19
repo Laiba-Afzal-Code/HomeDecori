@@ -172,7 +172,7 @@ export const getLatestPosts = async (req, res) => {
   try {
     const posts = await Post.find({ status: "published" })
       .sort({ createdAt: -1 })
-      .limit(5);
+      .limit(9);
 
     res.json(posts);
   } catch (error) {

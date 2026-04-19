@@ -7,7 +7,7 @@ const BlogCard = ({}) => {
   const [Posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const [visibleCount, setVisibleCount] = useState(10);
+  const [visibleCount, setVisibleCount] = useState(12);
   const fetchPosts = async () => {
     try {
       const res = await userAxios.get("/posts/getallposts");
@@ -22,7 +22,7 @@ const BlogCard = ({}) => {
     fetchPosts();
   }, []);
   const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 10);
+    setVisibleCount((prev) => prev + 12);
   };
   if (loading) return <p className="loading">Loading posts...</p>;
   return (

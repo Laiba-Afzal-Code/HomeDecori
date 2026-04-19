@@ -6,6 +6,7 @@ import "./blogrequest.css";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import { toast } from "react-toastify";
+import LatestCard from "../../Components/PostCard/LatestCard.jsx";
 
 export default function BlogRequest() {
   const [title, setTitle] = useState("");
@@ -100,7 +101,9 @@ export default function BlogRequest() {
           </form>
         </div>
       </div>
+      <LatestCard/>
       <Footer />
+
     </>
   );
 }

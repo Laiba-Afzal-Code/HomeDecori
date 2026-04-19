@@ -51,9 +51,12 @@ export default function AdminSettings() {
           <p><strong>Email:</strong> {admin.email}</p>
           <p><strong>Role:</strong> {admin.role}</p>
           <p>
-            <strong>Joined:</strong>{" "}
-            {new Date(admin.createdAt).toLocaleDateString()}
-          </p>
+  <strong>Joined:</strong>{" "}
+  {admin?.createdAt
+    ? new Date(admin.createdAt).toLocaleDateString("en-GB")
+    : "N/A"}
+  
+</p>
         </div>
       </div>
 
