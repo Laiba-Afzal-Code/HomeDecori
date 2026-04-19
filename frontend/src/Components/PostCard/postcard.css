@@ -33,7 +33,7 @@
 }
 .carpi {
   flex: 2;
-  width: 100%;
+  width: 800px;
   transition: 1s ease-in-out;
   background-size: cover;
   background-position: center;
@@ -61,20 +61,22 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 80px 40px;
+  /* flex-wrap: wrap; */
+  padding: 40px;
   position: relative;
-  /* width: 100%; */
+  /* max-width: 700px; */
 }
 .catecard {
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Lato";
   text-transform: uppercase;
   color: rgb(5, 130, 10);
   font-weight: 600;
   text-align: left;
+  /* margin: 0; */
 }
 .cardheadp {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #132b09;
   font-family: "Poppins", "Lato";
   margin: 0;
@@ -83,7 +85,7 @@
   text-align: left;
 }
 p.p {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Lato";
   font-weight: 500;
   color: #132b09;
@@ -94,13 +96,13 @@ p.p {
   align-items: center;
   justify-content: left;
   gap: 15px;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 .timep {
   font-family: "Poppins";
   font-weight: 500;
   color: #132b09;
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
 }
 
@@ -119,11 +121,16 @@ p.p {
   cursor: pointer;
 }
 
+
 .dots {
   position: absolute;
   bottom: 20px;
 
   left: 5%;
+}
+.dot {
+  padding: 5px;
+  
 }
 
 @media (max-width: 1024px) {
@@ -153,9 +160,9 @@ p.p {
   .postcard {
     padding: 10px 20px;
   }
-.p{
-  display: none;
-}
+  .p {
+    display: none;
+  }
   .cardpost {
     flex-direction: column;
     height: 100px;

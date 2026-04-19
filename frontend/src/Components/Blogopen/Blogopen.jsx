@@ -9,6 +9,10 @@ import { calculateReadingTime } from "../../utils/readingTime.js";
 import "./Blogopen.css";
 import { useNavigate } from "react-router-dom";
 import { PageLoader } from "../../utils/loading.jsx";
+import LatestCard from "../PostCard/LatestCard.jsx";
+import CardBlog from "../Minicompo/BlogCard/CardBlog.jsx";
+import PostCard from "../PostCard/PostCard.jsx";
+import EditorHeroSection from "../EditorFeatureCard/EditorHeroSection.jsx"
 
 export default function BlogOpen() {
   const { id } = useParams();
@@ -44,6 +48,7 @@ export default function BlogOpen() {
       try {
         const res = await userAxios.get(`/posts/${id}`);
         setPost(res.data);
+         console.log(res.data)
       } catch (err) {
         console.error("Failed to load post", err);
       } finally {
@@ -60,6 +65,7 @@ export default function BlogOpen() {
       try {
         const res = await userAxios.get(`/comment/post/${id}`);
         setComments(Array.isArray(res.data) ? res.data : []);
+       
       } catch (err) {
         console.error("Failed to load comments", err);
       }
@@ -328,6 +334,8 @@ export default function BlogOpen() {
             />
             <button type="submit">{editId ? "Update" : "Post"}</button>
           </form>
+          <CardBlog/>
+          <EditorHeroSection/>
         </main>
 
         {/* SIDEBAR */}
@@ -336,7 +344,7 @@ export default function BlogOpen() {
             <h3>Categories</h3>
             {Categories.map((c) => (
               <ul key={c._id}>
-                <Link to={`/category/${c.name}`} className="a">
+                <Link to={`/category/${c.slug}`} className="a">
                   <li className="cate">{c.name}</li>
                 </Link>
               </ul>

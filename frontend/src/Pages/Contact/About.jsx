@@ -23,7 +23,7 @@ const About = () => {
 
       {/* HERO SECTION */}
       <section className="about-hero">
-        <h1>About HomeDecorim</h1>
+        <h1 className="abouth1">About HomeDecorim</h1>
         <p>
           Inspiring modern living through thoughtful design, creative spaces,
           and digital storytelling.
@@ -33,7 +33,7 @@ const About = () => {
       {/* ABOUT CONTENT */}
       <section className="about-content">
         <div className="about-text">
-          <h2>Who We Are</h2>
+          <h2 className="abouth2">Who We Are</h2>
           <p>
             HomeDecorim is a design-focused blog and creative platform dedicated
             to home styling, interior inspiration, and modern decor trends.
@@ -43,7 +43,7 @@ const About = () => {
         </div>
 
         <div className="about-text">
-          <h2>What We Do</h2>
+          <h2 className="abouth2">What We Do</h2>
           <p>
             Beyond blogging, we operate as a creative advertising agency,
             delivering digital branding, social media growth, and visual
@@ -55,7 +55,7 @@ const About = () => {
 
       {/* Hero Section */}
       <section className="about-hero">
-        <h1>About Our Text Editor</h1>
+        <h1 className="abouth1">About Our Text Editor</h1>
         <p>
           We build powerful, modern, and easy-to-use text editing tools
           designed to boost productivity and simplify document creation.
@@ -65,7 +65,7 @@ const About = () => {
       {/* Who We Are */}
       <section className="about-section">
         <div className="about-container">
-          <h2>Who We Are</h2>
+          <h2 className="abouth2">Who We Are</h2>
           <p>
             Our platform was created to provide a professional online text editor
             that combines simplicity with powerful features. Whether you're a student,
@@ -96,7 +96,7 @@ const About = () => {
 
       {/* Features Section */}
       <section className="about-features">
-        <h2>What We Offer</h2>
+        <h2 className="abouth2">What We Offer</h2>
         <div className="features-grid">
           <div className="feature-box">Uppercase & Lowercase Conversion</div>
           <div className="feature-box">Bold, Italic & Font Styling</div>
@@ -111,8 +111,8 @@ const About = () => {
 
       {/* Closing Section */}
       <section className="about-footer">
-        <h2>Our Commitment</h2>
-        <p>
+        <h2 className="abouth2">Our Commitment</h2>
+        <p className="porp">
           We are committed to continuous innovation, performance optimization,
           and delivering secure, reliable tools that enhance your productivity.
         </p>
@@ -148,16 +148,16 @@ const About = () => {
 
       {/* SOCIAL PRESENCE */}
       <section className="about-social">
-        <h2>Our Digital Presence</h2>
+        <h2 className="abouth2">Our Digital Presence</h2>
         <p>
           We actively share ideas, visuals, and insights across social platforms
           to inspire design-driven communities.
         </p>
 
         <div className="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61574048553119" target="_blank" rel="noreferrer" >Instagram</a>
-          <a href="https://www.instagram.com/newscovry/" target="_blank" rel="noreferrer">Facebook</a>
-          <a href="https://www.linkedin.com/company/newscovry/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/home_decorim" target="_blank" rel="noreferrer" >Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61582429130428" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://www.linkedin.com/showcase/homedecorim/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
 

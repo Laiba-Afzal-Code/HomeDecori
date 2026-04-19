@@ -9,7 +9,10 @@ const Topnav = () => {
       <div className="topnav">
         <div className="navsocial">
           <div className="socilicon">
-            <Link target="blank" to={"https://www.facebook.com/profile.php?id=61582429130428"}>
+            <Link
+              target="blank"
+              to={"https://www.facebook.com/profile.php?id=61582429130428"}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -28,7 +31,9 @@ const Topnav = () => {
           <div className="socilicon">
             <Link
               target="blank"
-              to={"https://www.linkedin.com/showcase/111764115/admin/dashboard/"}
+              to={
+                "https://www.linkedin.com/showcase/homedecorim/"
+              }
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +140,7 @@ const Topnav = () => {
               />
               <path fill="none" d="M0 0h36v36H0z" />
             </svg>
-            <p className="conp">homedecorim@gmail.com</p>
+            <p className="conp">homedecorimlaiba@gmail.com</p>
           </div>
         </div>
       </div>

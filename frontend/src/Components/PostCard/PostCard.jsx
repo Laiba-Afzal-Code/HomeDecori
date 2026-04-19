@@ -89,7 +89,7 @@ const PostCard = () => {
 
           <h2 className="cardheadp">{post.title}</h2>
 
-          <p className="p">{cleanText(post.content).slice(0, 100)}...</p>
+          <p className="p">{cleanText(post.content).slice(0, 80)}...</p>
 
           <div className="info">
             <span className="author timep">

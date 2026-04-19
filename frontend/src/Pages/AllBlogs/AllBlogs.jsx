@@ -28,45 +28,53 @@ const AllBlogs = () => {
 
   return (
     <>
-    <Navbar/>
-    <div className="blogs-page">
-      <h1 className="page-title">All Blogs</h1>
+      <Navbar />
+      <div className="blogs-page">
+        <h1 className="page-title">All Blogs</h1>
 
-      <div className="blogs-grid">
-        {posts.map((post) => (
-          <div className="blog-card" key={post._id}>
-            <div
-              className="blog-img"
-              style={{ backgroundImage: `url(${post.image})` }}
-            />
-
-            <div className="blog-content">
-              <Link to={`/category/${post.category}`} className="blog-category">
-                {post.category}
-              </Link>
-
-              <h2>{post.title}</h2>
-
-              <p>
-                {cleanText(post.content).slice(0, 50)}...
-              </p>
-
-              <div className="blog-meta">
-                <span>By {post.author?.name}</span>
-              </div>
-
+        <div className="blogs-grid">
+          {posts.map((post) => (
+            <div className="blog-card" key={post._id}>
+              <div
+                className="blog-img"
+                style={{ backgroundImage: `url(${post.image})` }}
+              />
               <Link
                 to={`/posts/${post._id}/open/live/homedecorim/${post.slug}`}
-                className="read-btn"
+                className="a"
               >
+                <div className="blog-content">
+                  <div className="blog-meta">
+                    <span className="contentS">
+                      {" "}
+                      By <strong> {post.author?.name}</strong>
+                    </span>
+                    <Link
+                      to={`/category/${post.category}`}
+                      className="blog-category"
+                    >
+                      {post.category}
+                    </Link>
+                  </div>
+                  <h2 className="cardhead">{post.title}</h2>
+
+                  <p className="pcontent">
+                    {cleanText(post.content).slice(0, 150)}...
+                  </p>
+
+                  {/* <Link
+                to={`/posts/${post._id}/open/live/homedecorim/${post.slug}`}
+                className="read-btn"
+                >
                 Read More →
+              </Link> */}
+                </div>
               </Link>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };

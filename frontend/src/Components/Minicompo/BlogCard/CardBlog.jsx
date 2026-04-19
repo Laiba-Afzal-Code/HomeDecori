@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function CardBlog() {
   const [posts, setPosts] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(10);
+  const [visibleCount, setVisibleCount] = useState(12);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function CardBlog() {
         const { data } = await axios.get("/posts/getallposts");
 
         // Skip first 6 posts
-        const postsAfterSix = data.slice(10);
+        const postsAfterSix = data.slice(12);
 
         setPosts(postsAfterSix);
       } catch (error) {
@@ -29,7 +29,7 @@ export default function CardBlog() {
   }, []);
 
   const handleShowMore = () => {
-    setVisibleCount((prev) => prev + 10);
+    setVisibleCount((prev) => prev + 12);
   };
 
   if (loading) return <p>Loading posts...</p>;

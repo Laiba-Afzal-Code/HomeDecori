@@ -71,7 +71,7 @@ export default function HomeCategoryShowcase() {
                   >
                     <img src={post.image} alt={post.title} />
                     <div className="post-content">
-                      <h3>{post.title}</h3>
+                      <h3 className="catehead">{post.title}</h3>
                       <p>{cleanText(post.content).slice(0, 50)}...</p>
                     </div>
                   </article>
