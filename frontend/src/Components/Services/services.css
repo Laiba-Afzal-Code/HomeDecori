@@ -50,11 +50,12 @@
   color: #132b09;
 }
 
-.service-card h3 {
+.service-card .h3service {
   font-size: 1.2rem;
   color: #132b09;
   margin-bottom: 12px;
   transition: color 0.35s ease;
+  text-align: center;
 }
 
 .service-card p {

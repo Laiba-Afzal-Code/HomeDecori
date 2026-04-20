@@ -86,5 +86,6 @@
   .hd-footer-container {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding: 100px 10px;
   }
 }

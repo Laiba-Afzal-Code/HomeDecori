@@ -32,7 +32,7 @@ const Newsletter = () => {
   return (
     <section className="newsletter">
       <h2 className="h2blog">Subscribe to Our Newsletter</h2>
-      <p className="pblog">Get the latest blogs and updates directly in your inbox.</p>
+      <p className="ppblog">Get the latest blogs and updates directly in your inbox.</p>
 
       <form onSubmit={handleSubmit} className="newsletter-form">
         <input

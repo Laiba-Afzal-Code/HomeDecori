@@ -1,67 +1,90 @@
+/* Wrapper */
+.privacy-wrapper {
+  background: #f8fafc;
+  padding: 40px 16px;
+}
+
+/* Container */
 .privacy-container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa, #eef1f4);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 100px 15px;
-  font-family: "Inter", sans-serif;
-}
-
-.privacy-card {
   max-width: 900px;
-  width: 100%;
-  background: #ffffff;
-  border-radius: 16px;
+  margin: auto;
+  background: #fff;
   padding: 40px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
 }
 
-.privacy-card h1 {
-  font-size: 2.4rem;
+/* Heading */
+.privacy-container h1 {
+  font-size: 32px;
   margin-bottom: 10px;
-  color: #222;
+  font-weight: 700;
 }
 
 .last-updated {
-  font-size: 0.9rem;
-  color: #777;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Sections */
+.privacy-container section {
   margin-bottom: 30px;
 }
 
-.privacy-card section {
-  margin-bottom: 30px;
-}
-
-.privacy-card h2 {
-  font-size: 1.4rem;
+.privacy-container h2 {
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #333;
+  font-weight: 600;
+  color: #111;
   text-align: left;
 }
 
-.privacy-card p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #555;
+/* Text */
+.privacy-container p {
+  font-size: 15px;
+  color: #444;
 }
 
-.privacy-card ul {
+/* Lists */
+.privacy-container ul {
   padding-left: 20px;
 }
 
-.privacy-card ul li {
+.privacy-container li {
   margin-bottom: 8px;
-  color: #555;
-  line-height: 1.6;
+  font-size: 15px;
 }
 
-@media (max-width: 768px) {
-  .privacy-card {
-    padding: 25px;
+/* Links */
+.privacy-container a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.privacy-container a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .privacy-container {
+    padding: 20px;
   }
 
-  .privacy-card h1 {
-    font-size: 2rem;
+  .privacy-container h1 {
+    font-size: 24px;
+  }
+
+  .privacy-container h2 {
+    font-size: 18px;
+  }
+
+  .privacy-container p,
+  .privacy-container li {
+    font-size: 14px;
   }
 }

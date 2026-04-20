@@ -18,11 +18,12 @@
   color: white;
 }
 
-.newsletter p {
+.newsletter .ppblog {
   margin-bottom: 20px;
   opacity: 0.9;
   font-family: "Lato";
   font-size: 17px;
+  color: #e1f340;
 }
 
 .newsletter form {

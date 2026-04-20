@@ -68,7 +68,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
             </li>
             <li className="navli">
               <NavLink
-                to="/texteditor"
+                to="/texteditor/fileconverter/tools"
                 className="anav"
                 onClick={() => setMenuOpen(false)}
               >

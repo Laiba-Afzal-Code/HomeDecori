@@ -28,7 +28,7 @@ const EditorHeroSection = () => {
           </ul>
 
           <div className="hero-buttons">
-            <Link to={"/texteditor"} className="a">
+            <Link to={"/texteditor/fileconverter/tools"} className="a">
             <button className="primary-btn">Try Editor Now</button>
             </Link>
             <Link to={"/about-us"} className="a">

@@ -47,15 +47,15 @@ export default function LatestCard() {
                 className="horizontal-post-card__image"
               />
               <div className="horizontal-post-card__content">
-                <h3 className="horizontal-post-card__title">
-                  {post.title.slice(0, 100)}...
-                </h3>
-                {/* Optional excerpt */}
-                <p className="horizontal-post-card__excerpt">{cleanText(post.content).slice(0, 60)}...</p>
                 <div className="horizontal-post-card__meta">
                   <span>{new Date(post.createdAt).toLocaleDateString()}</span>
                   <span>{post.category}</span>
                 </div>
+                <h3 className="horizontal-post-card__title">
+                  {post.title}...
+                </h3>
+                {/* Optional excerpt */}
+                <p  className="horizontal-post-card__excerpt">{cleanText(post.content).slice(0, 160)}...</p>
               </div>
             </Link>
           ))}
