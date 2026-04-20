@@ -82,7 +82,7 @@ const Footer = () => {
               <Link to="/about-us">About Us</Link>
             </li>
             <li>
-              <Link to="/texteditor">Editor Tool</Link>
+              <Link to="/texteditor/fileconverter/tools">Editor File Converter Tools</Link>
             </li>
            
              <li>

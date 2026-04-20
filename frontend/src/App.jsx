@@ -55,7 +55,7 @@ function App() {
           <Route path="/loder" element={<PageLoader />} />
           <Route path="/categorylist" element={<HomeCategoryShowcase />} />
           <Route path="/write-with-us" element={<WriteWithUs />} />
-          <Route path="/texteditor" element={<TextEditor />} />
+          <Route path="/texteditor/fileconverter/tools" element={<TextEditor />} />
           <Route path="/afterbeforeview" element={<ABview />} />
           <Route path="/imageeditortool" element={<ImageEditor />} />
           <Route path="blogrequest" element={<BlogRequest />} />

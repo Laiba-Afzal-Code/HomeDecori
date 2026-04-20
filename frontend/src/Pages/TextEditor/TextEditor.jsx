@@ -7,6 +7,7 @@ import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import ImageEditor from "../../Components/ImageEditor/ImageEditor";
 
+import { Helmet } from "react-helmet";
 const TextEditor = () => {
   const [text, setText] = useState("");
   const [isBold, setIsBold] = useState(false);
@@ -114,155 +115,175 @@ const TextEditor = () => {
 
   return (
     <>
+      <Navbar />
+      <div className="editor-container">
+        <Helmet>
+          <title>Smart File Converter Tool | JPG, PNG, PDF, DOCX</title>
 
-    <Navbar/>
-    <div className="editor-container">
-    <h1>Welcome to the Homedecorim tool. We're glad to see you here. Enjoy it</h1>
-      <h2>Full-Featured Text Editor</h2>
-
-      {/* Font & color controls */}
-      <div className="controls">
-        <label>
-          Font Size:
-          <input
-            type="number"
-            value={fontSize}
-            min="12"
-            max="48"
-            onChange={(e) => setFontSize(Number(e.target.value))}
+          <meta
+            name="description"
+            content="Free online file converter tool to compress images and convert JPG, PNG, WEBP, PDF and DOCX easily."
           />
-        </label>
-        <label>
-          Font Color:
-          <input
-            type="color"
-            value={fontColor}
-            onChange={(e) => setFontColor(e.target.value)}
-          />
-        </label>
-        <label>
-          Background Color:
-          <input
-            type="color"
-            value={bgColor}
-            onChange={(e) => setBgColor(e.target.value)}
-          />
-        </label>
-      </div>
 
-      {/* Textarea */}
-      <textarea
-        className={`editor-text ${isBold ? "bold" : ""} ${
-          isItalic ? "italic" : ""
-        }`}
-        style={{ fontSize: `${fontSize}px`, color: fontColor, background: bgColor }}
-        value={text}
-        onChange={(e) => updateText(e.target.value)}
-        onKeyDown={handleKeyDown}
-        placeholder="Start typing here..."
-      />
+          <meta name="robots" content="index, follow" />
+        </Helmet>
 
-      {/* Buttons */}
-      <div className="buttons-container">
-        <button onClick={handleUppercase}>Uppercase</button>
-        <button onClick={handleLowercase}>Lowercase</button>
-        <button onClick={handleBold}>{isBold ? "Unbold" : "Bold"}</button>
-        <button onClick={handleItalic}>{isItalic ? "Unitalic" : "Italic"}</button>
-        <button onClick={handleRemoveExtraSpaces}>Remove Extra Spaces</button>
-        <button onClick={handleRemoveWrongWords}>Remove Wrong Words</button>
-        <button onClick={handleCopy}>Copy</button>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleUndo}>Undo</button>
-        <button onClick={handleRedo}>Redo</button>
-        <button onClick={handleDownloadPDF}>Download PDF</button>
-        <button onClick={handleDownloadTXT}>Download TXT</button>
-        <button onClick={handleDownloadDOCX}>Download DOCX</button>
-      </div>
+        <h1>
+          Welcome to the Homedecorim tool. We're glad to see you here. Enjoy it
+        </h1>
+        <h2>Full-Featured Text Editor</h2>
 
-      {/* Summary */}
-      <div className="summary">
-        <p>Word Count: {text.trim() === "" ? 0 : text.trim().split(/\s+/).length}</p>
-        <p>Character Count: {text.length}</p>
-      </div>
+        {/* Font & color controls */}
+        <div className="controls">
+          <label>
+            Font Size:
+            <input
+              type="number"
+              value={fontSize}
+              min="12"
+              max="48"
+              onChange={(e) => setFontSize(Number(e.target.value))}
+            />
+          </label>
+          <label>
+            Font Color:
+            <input
+              type="color"
+              value={fontColor}
+              onChange={(e) => setFontColor(e.target.value)}
+            />
+          </label>
+          <label>
+            Background Color:
+            <input
+              type="color"
+              value={bgColor}
+              onChange={(e) => setBgColor(e.target.value)}
+            />
+          </label>
+        </div>
 
-      {/* Preview */}
-      <div className="preview">
-        <h3>Live Preview:</h3>
-        <div
-          className={`preview-text ${isBold ? "bold" : ""} ${
+        {/* Textarea */}
+        <textarea
+          className={`editor-text ${isBold ? "bold" : ""} ${
             isItalic ? "italic" : ""
           }`}
-          style={{ fontSize: `${fontSize}px`, color: fontColor, background: bgColor }}
-        >
-          {text || "Nothing to preview..."}
+          style={{
+            fontSize: `${fontSize}px`,
+            color: fontColor,
+            background: bgColor,
+          }}
+          value={text}
+          onChange={(e) => updateText(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder="Start typing here..."
+        />
+
+        {/* Buttons */}
+        <div className="buttons-container">
+          <button onClick={handleUppercase}>Uppercase</button>
+          <button onClick={handleLowercase}>Lowercase</button>
+          <button onClick={handleBold}>{isBold ? "Unbold" : "Bold"}</button>
+          <button onClick={handleItalic}>
+            {isItalic ? "Unitalic" : "Italic"}
+          </button>
+          <button onClick={handleRemoveExtraSpaces}>Remove Extra Spaces</button>
+          <button onClick={handleRemoveWrongWords}>Remove Wrong Words</button>
+          <button onClick={handleCopy}>Copy</button>
+          <button onClick={handleClear}>Clear</button>
+          <button onClick={handleUndo}>Undo</button>
+          <button onClick={handleRedo}>Redo</button>
+          <button onClick={handleDownloadPDF}>Download PDF</button>
+          <button onClick={handleDownloadTXT}>Download TXT</button>
+          <button onClick={handleDownloadDOCX}>Download DOCX</button>
+        </div>
+
+        {/* Summary */}
+        <div className="summary">
+          <p>
+            Word Count:{" "}
+            {text.trim() === "" ? 0 : text.trim().split(/\s+/).length}
+          </p>
+          <p>Character Count: {text.length}</p>
+        </div>
+
+        {/* Preview */}
+        <div className="preview">
+          <h3>Live Preview:</h3>
+          <div
+            className={`preview-text ${isBold ? "bold" : ""} ${
+              isItalic ? "italic" : ""
+            }`}
+            style={{
+              fontSize: `${fontSize}px`,
+              color: fontColor,
+              background: bgColor,
+            }}
+          >
+            {text || "Nothing to preview..."}
+          </div>
+        </div>
+        <ImageEditor />
+        <div className="tools-container">
+          <h1 className="tools-title">Online Editing Tools</h1>
+          <p className="tools-intro">
+            Our platform provides powerful and easy-to-use online editing tools
+            designed for creators, bloggers, and professionals. These tools help
+            users edit images, write content, and optimize files quickly without
+            installing any software.
+          </p>
+
+          <div className="tool-card">
+            <h2>Image Editor</h2>
+
+            <p>
+              The Image Editor allows users to upload and modify images directly
+              in the browser. It provides features such as format conversion,
+              image compression, and basic editing tools. This makes it perfect
+              for bloggers, designers, and content creators who need quick image
+              optimization.
+            </p>
+
+            <ul>
+              <li>Convert images to different formats (JPG, PNG, WEBP)</li>
+              <li>Compress images to reduce file size</li>
+              <li>Download optimized images instantly</li>
+              <li>Convert images to PDF format</li>
+              <li>Preview images before downloading</li>
+            </ul>
+
+            <p>
+              The tool is fully browser-based, meaning your files stay secure
+              and are not stored on any external servers.
+            </p>
+          </div>
+
+          <div className="tool-card">
+            <h2>Text Editor</h2>
+
+            <p>
+              The Text Editor is a simple yet powerful writing tool that helps
+              users create, edit, and format text easily. It is ideal for
+              writing blog posts, notes, or preparing content for websites and
+              documents.
+            </p>
+
+            <ul>
+              <li>Write and edit text in a clean interface</li>
+              <li>Format text with headings, lists, and styles</li>
+              <li>Copy or download written content</li>
+              <li>Useful for bloggers and content creators</li>
+              <li>Fast and distraction-free writing environment</li>
+            </ul>
+
+            <p>
+              The editor provides a smooth writing experience and helps users
+              focus on content creation without unnecessary distractions.
+            </p>
+          </div>
         </div>
       </div>
-    <ImageEditor/>
-    <div className="tools-container">
-
-      <h1 className="tools-title">Online Editing Tools</h1>
-      <p className="tools-intro">
-        Our platform provides powerful and easy-to-use online editing tools 
-        designed for creators, bloggers, and professionals. These tools help 
-        users edit images, write content, and optimize files quickly without 
-        installing any software.
-      </p>
-
-      <div className="tool-card">
-
-        <h2>Image Editor</h2>
-
-        <p>
-          The Image Editor allows users to upload and modify images directly 
-          in the browser. It provides features such as format conversion, 
-          image compression, and basic editing tools. This makes it perfect 
-          for bloggers, designers, and content creators who need quick image 
-          optimization.
-        </p>
-
-        <ul>
-          <li>Convert images to different formats (JPG, PNG, WEBP)</li>
-          <li>Compress images to reduce file size</li>
-          <li>Download optimized images instantly</li>
-          <li>Convert images to PDF format</li>
-          <li>Preview images before downloading</li>
-        </ul>
-
-        <p>
-          The tool is fully browser-based, meaning your files stay secure 
-          and are not stored on any external servers.
-        </p>
-
-      </div>
-
-      <div className="tool-card">
-
-        <h2>Text Editor</h2>
-
-        <p>
-          The Text Editor is a simple yet powerful writing tool that helps 
-          users create, edit, and format text easily. It is ideal for writing 
-          blog posts, notes, or preparing content for websites and documents.
-        </p>
-
-        <ul>
-          <li>Write and edit text in a clean interface</li>
-          <li>Format text with headings, lists, and styles</li>
-          <li>Copy or download written content</li>
-          <li>Useful for bloggers and content creators</li>
-          <li>Fast and distraction-free writing environment</li>
-        </ul>
-
-        <p>
-          The editor provides a smooth writing experience and helps users 
-          focus on content creation without unnecessary distractions.
-        </p>
-
-      </div>
-
-    </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };

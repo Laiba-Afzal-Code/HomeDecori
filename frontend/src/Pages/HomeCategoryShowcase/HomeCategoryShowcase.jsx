@@ -71,8 +71,14 @@ export default function HomeCategoryShowcase() {
                   >
                     <img src={post.image} alt={post.title} />
                     <div className="post-content">
+                    <div className="metahome">
+                      <span className="spanhome"> 
+                        {new Date(post.createdAt).toLocaleDateString()}
+                      </span> 
+                      <span className="spanhome"> {post.category}</span> 
+                    </div>
                       <h3 className="catehead">{post.title}</h3>
-                      <p>{cleanText(post.content).slice(0, 50)}...</p>
+                      <p>{cleanText(post.content).slice(0, 150)}...</p>
                     </div>
                   </article>
                 </Link>
