@@ -84,6 +84,9 @@ const Footer = () => {
             <li>
               <Link to="/texteditor/fileconverter/tools">Editor File Converter Tools</Link>
             </li>
+            <li>
+              <Link to="/homedecorimTools/tools-hub">Decorim Tools</Link>
+            </li>
            
              <li>
               <Link to="/afterbeforeview">Ai Room</Link>
@@ -101,7 +104,7 @@ const Footer = () => {
         <div className="hd-footer-section">
           <h3>Decor Styles</h3>
           {categories.length > 0 ? (
-            categories.slice(0, 7).map((cat) => (
+            categories.slice(0, 8).map((cat) => (
               <ul>
                 <li>
                   <Link to={`/category/${cat.slug}`}  key={cat._id}>
@@ -119,7 +122,7 @@ const Footer = () => {
         <div className="hd-footer-section">
           <h3>Decor Styles</h3>
           {categories.length > 0 ? (
-            categories.slice(5).map((cat) => (
+            categories.slice(8).map((cat) => (
               <ul>
                 <li>
                   <Link to={`/category/${cat.slug}`} key={cat._id}>

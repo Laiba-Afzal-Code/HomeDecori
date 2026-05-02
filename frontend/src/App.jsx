@@ -25,6 +25,13 @@ import ABview from "./Pages/ABview/ABview.jsx";
 import WriteWithUs from "./Pages/Contact/WriteUs.jsx";
 import NotFound from "./Pages/NotFound/NotFound.jsx";
 import BlogRequest from "./Pages/BlogRequest/BlogRequest.jsx";
+import { RoomCalculator } from "./Components/Hometool/RoomCalculator.jsx";
+import { ColorPalette } from "./Components/Hometool/ColorPalette.jsx";
+// import { FurniturePlanner } from "./Components/Hometool/FurniturePlanner.jsx";
+import { WallpaperCalculator } from "./Components/Hometool/WallpaperCalculator.jsx";
+import { BudgetCalculator } from "./Components/Hometool/BudgetCalculator.jsx";
+import ToolsPage from "./Pages/Toolspage/Toolspage.jsx";
+import FurniturePlanner from "./Components/Hometool/FurniturePlanner.jsx";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,7 +62,32 @@ function App() {
           <Route path="/loder" element={<PageLoader />} />
           <Route path="/categorylist" element={<HomeCategoryShowcase />} />
           <Route path="/write-with-us" element={<WriteWithUs />} />
-          <Route path="/texteditor/fileconverter/tools" element={<TextEditor />} />
+          <Route
+            path="/texteditor/fileconverter/tools"
+            element={<TextEditor />}
+          />
+          <Route path="/tools/room-calculator" element={<RoomCalculator />} />
+          <Route path="/tools/color-palette" element={<ColorPalette />} />{" "}
+          {/* <Route
+            path="tools/furniture-planner"
+            element={<FurniturePlanner />}
+          />{" "} */}
+          <Route
+            path="tools/wallpaper-calculator"
+            element={<WallpaperCalculator />}
+          />
+          <Route
+            path="tools/budget-calculator"
+            element={<BudgetCalculator />}
+          />
+            <Route
+           path="tools/furniture-planner"
+           element={<FurniturePlanner />}
+         />
+            <Route
+            path="homedecorimTools/tools-hub"
+            element={<ToolsPage />}
+          />
           <Route path="/afterbeforeview" element={<ABview />} />
           <Route path="/imageeditortool" element={<ImageEditor />} />
           <Route path="blogrequest" element={<BlogRequest />} />
@@ -71,7 +103,6 @@ function App() {
           <Route path="/testimonial" element={<Testimonials />} />
           {/* Admin routes */}
           <Route path="/admin/*" element={<AdminRoutes />} />
-
           {/* 404 page */}
           <Route path="*" element={<NotFound />} />
         </Routes>

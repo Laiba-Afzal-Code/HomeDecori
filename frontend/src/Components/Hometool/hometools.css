@@ -1,0 +1,76 @@
+.home-tools-section {
+  padding: 80px 20px;
+  background: #f6f7fb;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.home-tools-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-tools-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.home-tools-subtitle {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* GRID */
+.home-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.home-tool-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.home-tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* ICON */
+.home-tool-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.home-tool-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.home-tool-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* CTA */
+.home-tool-cta {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a90e2;
+}

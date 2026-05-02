@@ -75,6 +75,15 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
                 Editor
               </NavLink>
             </li>
+            <li className="navli">
+              <NavLink
+                to="/homedecorimTools/tools-hub"
+                className="anav"
+                onClick={() => setMenuOpen(false)}
+              >
+                DecorimTools
+              </NavLink>
+            </li>
           </ul>
 
           <div className="navbtn">
