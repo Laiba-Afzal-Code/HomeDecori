@@ -1,0 +1,118 @@
+.tools-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f6f7fb, #ffffff);
+  padding: 100px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.tools-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tools-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.tools-subtitle {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.tools-search-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #4b5563;
+  background: #eef2ff;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* GRID */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.tool-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* TOP */
+.tool-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool-icon {
+  font-size: 28px;
+}
+
+.tool-tag {
+  font-size: 11px;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+/* TEXT */
+.tool-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 12px 0 6px;
+  color: #111827;
+}
+
+.tool-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* CTA */
+.tool-footer {
+  margin-top: 15px;
+}
+
+.tool-cta {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a90e2;
+}
+
+/* SEO BLOCK */
+.tools-seo {
+  max-width: 900px;
+  margin: 60px auto 0;
+  text-align: center;
+  color: #374151;
+}
+
+.tools-seo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}

@@ -74,7 +74,7 @@ const About = () => {
           <section className="about-cards">
             <div className="card">
               <h3>Our Mission</h3>
-              <p>
+              <p className="mv">
                 To make text editing simple, fast, and accessible for everyone.
                 We focus on clean design, powerful tools, and seamless user
                 experience.
@@ -83,7 +83,7 @@ const About = () => {
 
             <div className="card">
               <h3>Our Vision</h3>
-              <p>
+              <p className="mv">
                 To become a complete productivity platform that empowers
                 creators, students, and professionals worldwide with modern
                 digital tools.
@@ -105,6 +105,15 @@ const About = () => {
               <div className="feature-box">Export as PDF, TXT & DOCX</div>
               <div className="feature-box">Live Preview</div>
               <div className="feature-box">Keyboard Shortcuts</div>
+              <div className="feature-box">ColorPalette</div>
+              <div className="feature-box">WallpaperCalculator</div>
+              <div className="feature-box">BudgetCalculator</div>
+              <div className="feature-box">RoomCalculator</div>
+              <div className="feature-box">Blogs</div>
+              <div className="feature-box">Advance tips</div>
+              <div className="feature-box">AI Room</div>
+               <div className="feature-box">Decorim Write</div>
+              
             </div>
           </section>
           <EditorHeroSection />

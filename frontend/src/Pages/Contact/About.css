@@ -44,6 +44,7 @@
   font-size: 16px;
   line-height: 1.7;
   color: #555;
+  text-align: center;
 }
 
 /* CARDS */
@@ -78,7 +79,9 @@
   color: #555;
   line-height: 1.6;
 }
-
+.mv{
+  text-align:left;
+}
 /* SOCIAL */
 .about-social {
   padding: 70px 20px;
