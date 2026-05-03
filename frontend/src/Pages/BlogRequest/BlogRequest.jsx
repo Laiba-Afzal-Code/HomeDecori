@@ -7,6 +7,7 @@ import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import { toast } from "react-toastify";
 import LatestCard from "../../Components/PostCard/LatestCard.jsx";
+import { ButtonLoader, PageLoader } from "../../utils/loading.jsx";
 
 export default function BlogRequest() {
   const [title, setTitle] = useState("");
@@ -15,6 +16,7 @@ export default function BlogRequest() {
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleImage = (e) => {
     const file = e.target.files[0];
@@ -37,15 +39,26 @@ export default function BlogRequest() {
     formData.append("content", content);
     formData.append("image", image);
     formData.append("readingTime", calculateReadingTime(content));
-
+setLoading(true)
     try {
       await axios.post("/blog/submit", formData);
 
       toast.success("Blog submitted for admin review!");
     } catch (err) {
       toast.error(err);
+    }finally{
+      setLoading(false);
+
     }
   };
+  //  /* LOADING */
+  // if (loading) {
+  //   return (
+  //     <>
+  //       <ButtonLoader />
+  //     </>
+  //   );
+  // }
 
   return (
     <>
@@ -97,13 +110,14 @@ export default function BlogRequest() {
               Reading Time: {calculateReadingTime(content)} min
             </p>
 
-            <button className="publishBtn">Submit Blog</button>
+            <button type="submit" className="publishBtn" disabled={loading}>
+              {loading ? <ButtonLoader /> : "Submit Blog"}
+            </button>
           </form>
         </div>
       </div>
-      <LatestCard/>
+      <LatestCard />
       <Footer />
-
     </>
   );
 }

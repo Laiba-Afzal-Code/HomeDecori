@@ -9,6 +9,7 @@ export default function AdminCategory() {
   const token = localStorage.getItem("token");
   // Fetch all categories
   const fetchCategories = async () => {
+    
     try {
       const { data } = await adminAxios.get("/categories/", {
         headers: { Authorization: `Bearer ${token}` },
@@ -19,33 +20,32 @@ export default function AdminCategory() {
         "Fetch categories error:",
         err.response?.data?.message || err.message,
       );
-    }
+    } 
   };
 
   // Create a new category
- const handleCreate = async (e) => {
-  e.preventDefault();
-  const trimmedName = name.trim();
-  if (!trimmedName) return alert("Category name cannot be empty");
+  const handleCreate = async (e) => {
+    e.preventDefault();
+    const trimmedName = name.trim();
+    if (!trimmedName) return alert("Category name cannot be empty");
 
-  try {
-    const { data } = await adminAxios.post(
-      "/categories/createcate",
-      { name: trimmedName }, // trimmed
-      { headers: { Authorization: `Bearer ${token}` } },
-    );
-    setCategories((prev) => [...prev, data]);
-    setName("");
-    toast.success("Successfully Creating Category")
-  } catch (err) {
-    console.error(
-      "Create category error:",
-      err.response?.data?.message || err.message
-    );toast.error(err.response?.data?.message ||"Error creating category")
-  
-  }
-};
-
+    try {
+      const { data } = await adminAxios.post(
+        "/categories/createcate",
+        { name: trimmedName }, // trimmed
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+      setCategories((prev) => [...prev, data]);
+      setName("");
+      toast.success("Successfully Creating Category");
+    } catch (err) {
+      console.error(
+        "Create category error:",
+        err.response?.data?.message || err.message,
+      );
+      toast.error(err.response?.data?.message || "Error creating category");
+    }
+  };
 
   // Delete a category
   const handleDelete = async (id) => {
@@ -56,13 +56,10 @@ export default function AdminCategory() {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCategories((prev) => prev.filter((c) => c._id !== id));
-      toast.success("Deleted category")
+      toast.success("Deleted category");
     } catch (err) {
-      toast.error(
-        "Delete category error:",
-       
-      );
-      toast.error(err.response?.data?.message ||"Error Deleting category")
+      toast.error("Delete category error:");
+      toast.error(err.response?.data?.message || "Error Deleting category");
     }
   };
 
@@ -83,8 +80,9 @@ export default function AdminCategory() {
           onChange={(e) => setName(e.target.value)}
           required
         />
-       <button type="submit" disabled={!name.trim()}>Create Category</button>
-
+        <button type="submit" disabled={!name.trim()}>
+          Create Category
+        </button>
       </form>
 
       {/* Categories Table */}

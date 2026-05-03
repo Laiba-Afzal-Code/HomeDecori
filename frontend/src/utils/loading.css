@@ -1,0 +1,138 @@
+/* =========================
+   GLOBAL SPINNER
+========================= */
+.loader-spinner {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid rgba(55, 56, 55, 0.56);
+  border-top-color: #9ce998;
+  animation: spin 0.7s linear infinite;
+}
+
+.loader-spinner.small {
+  width: 14px;
+  height: 14px;
+  border-color: rgba(250, 249, 249, 0.47);
+  border-top-color: #15e137;
+}
+
+/* =========================
+   PAGE LOADER
+========================= */
+.page-loader {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #f9fafb, #eef2f7);
+}
+
+/* Premium ring loader */
+.loader-ring {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid rgba(122, 213, 11, 0.599);
+  border-top-color: #038b0e;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Text */
+.loader-text {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: "Lato", "Poppins", sans-serif;
+}
+
+/* Animated dots */
+.loader-dots span {
+  animation: blink 1.4s infinite;
+}
+
+.loader-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* =========================
+   SKELETON LOADER
+========================= */
+.skeleton-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton {
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #e5e7eb 25%,
+    #f3f4f6 37%,
+    #e5e7eb 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.skeleton.title {
+  height: 20px;
+  width: 70%;
+}
+
+.skeleton.line {
+  height: 14px;
+  width: 100%;
+}
+
+.skeleton.short {
+  width: 80%;
+}
+
+.skeleton.tiny {
+  width: 60%;
+}
+
+/* =========================
+   INLINE LOADER
+========================= */
+.inline-loader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+@keyframes blink {
+  0%, 80%, 100% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 1;
+  }
+}

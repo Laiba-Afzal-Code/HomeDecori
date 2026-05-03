@@ -266,10 +266,9 @@
   background: #efeff0;
 }
 @media (max-width: 768px) {
-.search-results-page{
-  padding: 100px 20px;
-
-}
+  .search-results-page {
+    padding: 100px 20px;
+  }
 }
 /* =====================
    HAMBURGER ICON
@@ -299,15 +298,17 @@
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
-@media (max-width: 1068px) {
+@media (max-width: 1168px) {
   .nav-search {
     width: 50%;
   }
   .nav {
-    width: 100%;
+    width: 95%;
   }
+ 
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1068px) {
   .nav {
     width: 95%;
     top: 8px;

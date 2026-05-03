@@ -27,7 +27,6 @@ import NotFound from "./Pages/NotFound/NotFound.jsx";
 import BlogRequest from "./Pages/BlogRequest/BlogRequest.jsx";
 import { RoomCalculator } from "./Components/Hometool/RoomCalculator.jsx";
 import { ColorPalette } from "./Components/Hometool/ColorPalette.jsx";
-// import { FurniturePlanner } from "./Components/Hometool/FurniturePlanner.jsx";
 import { WallpaperCalculator } from "./Components/Hometool/WallpaperCalculator.jsx";
 import { BudgetCalculator } from "./Components/Hometool/BudgetCalculator.jsx";
 import ToolsPage from "./Pages/Toolspage/Toolspage.jsx";
