@@ -6,6 +6,7 @@ import "./blogs.css";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import cleanText from "../../utils/cleanText";
+import { PageLoader } from "../../utils/loading";
 
 const CategoryPosts = () => {
   const { category } = useParams();
@@ -26,7 +27,14 @@ const CategoryPosts = () => {
     fetchCategoryPosts();
   }, [category]);
 
-  if (loading) return <div className="loader" />;
+  /* LOADING */
+  if (loading) {
+    return (
+      <>
+        <PageLoader />
+      </>
+    );
+  }
 
   return (
     <>

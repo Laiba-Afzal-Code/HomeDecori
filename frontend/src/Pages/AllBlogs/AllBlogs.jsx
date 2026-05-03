@@ -5,6 +5,7 @@ import "./blogs.css";
 import cleanText from "../../utils/cleanText";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
+import { PageLoader } from "../../utils/loading";
 
 const AllBlogs = () => {
   const [posts, setPosts] = useState([]);
@@ -24,7 +25,14 @@ const AllBlogs = () => {
     fetchPosts();
   }, []);
 
-  if (loading) return <div className="loader" />;
+ /* LOADING */
+  if (loading) {
+    return (
+      <>
+        <PageLoader />
+      </>
+    );
+  }
 
   return (
     <>
