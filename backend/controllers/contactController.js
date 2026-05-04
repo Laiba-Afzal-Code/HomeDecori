@@ -32,7 +32,9 @@ export const sendContactEmail = async (req, res) => {
 
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
-    console.error("EMAIL ERROR:", error); // 👈 keep this
+    console.error("EMAIL ERROR FULL:", error);
+    console.error("EMAIL MESSAGE:", error?.message);
+    console.error("EMAIL RESPONSE:", error?.response); // 👈 keep this
     res.status(500).json({ message: "Failed to send email" });
   }
 };
