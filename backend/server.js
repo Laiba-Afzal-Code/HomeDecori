@@ -12,6 +12,7 @@ import commentRoutes from "./routes/commentRoutes.js";
 import { upload } from "./middleware/uploadMiddleware.js";
 import contactRoutes from "./routes/contactRoute.js";
 import blogRoutes  from "./routes/blogRoutes.js";
+import sitemapRoutes from './routes/sitemapRoutes.js'
 dotenv.config();
 connectDB();
 const app = express();
@@ -43,6 +44,7 @@ app.get("/api/test", (req,res)=>{
 res.send("API working");
 });
 // AI Room Design route
+app.use("/", sitemapRoutes);
 app.use("/api", aiimageRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/admin", adminRoutes);
