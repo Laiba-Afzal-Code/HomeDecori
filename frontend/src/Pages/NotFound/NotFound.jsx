@@ -27,7 +27,7 @@ export default function NotFound() {
 
         <h2>Page Not Found</h2>
 
-        <p>
+        <p className="dp">
           Oops! The page you're looking for doesn’t exist or has been moved.
           Let’s go back and explore beautiful home designs.
         </p>

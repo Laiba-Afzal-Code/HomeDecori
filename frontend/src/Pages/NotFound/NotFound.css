@@ -38,12 +38,12 @@ h2 {
   margin-bottom: 10px;
 }
 
-p {
+.dp {
   margin-bottom: 30px;
   color: #555;
 }
 
-.dark p {
+.dark .dp {
   color: #ddd;
 }
 

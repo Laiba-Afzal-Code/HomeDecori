@@ -11,7 +11,9 @@ margin: 0;
   /* position: relative; */
 }
 
-
+p{
+  color: #132b09;
+}
 
 .lato-thin {
   font-family: "Lato", sans-serif;

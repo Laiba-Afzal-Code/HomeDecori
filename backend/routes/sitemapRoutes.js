@@ -36,6 +36,12 @@ router.get("/sitemap.xml", async (req, res) => {
       { url: "/blogs", priority: "0.9" },
       { url: "/about-us", priority: "0.7" },
       { url: "/contact-us", priority: "0.7" },
+      { url: "/blogrequest", priority: "0.7" },
+      { url: "/homedecorimTools/tools-hub", priority: "0.7" },
+      { url: "/texteditor/fileconverter/tools", priority: "0.7" },
+      { url: "/write-with-us", priority: "0.7" },
+      { url: "/afterbeforeview", priority: "0.7" },
+      { url: "/privacy-policy", priority: "0.7" },
     ];
 
     staticPages.forEach((page) => {
