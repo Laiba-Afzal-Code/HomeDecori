@@ -13,6 +13,10 @@ import { upload } from "./middleware/uploadMiddleware.js";
 import contactRoutes from "./routes/contactRoute.js";
 import blogRoutes  from "./routes/blogRoutes.js";
 import sitemapRoutes from './routes/sitemapRoutes.js'
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 dotenv.config();
 connectDB();
 const app = express();
@@ -43,8 +47,8 @@ app.post("/upload", upload.single("image"), (req, res) => {
 app.get("/api/test", (req,res)=>{
 res.send("API working");
 });
+
 // AI Room Design route
-app.use("/", sitemapRoutes);
 app.use("/api", aiimageRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/admin", adminRoutes);
@@ -52,9 +56,15 @@ app.use("/api/comment", commentRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/categories", categoryRoutes);
-
+app.use("/", sitemapRoutes);
 app.use("/api/blog",blogRoutes);
 
+
+app.use(express.static(path.join(__dirname, "frontend/build")));
+
+app.use((req, res) => {
+   res.sendFile(path.join(__dirname, "frontend/build/index.html"));
+});
 const PORT = process.env.PORT;
 app.listen(PORT, () =>
   console.log(`Server running on port http://localhost:${PORT}`)

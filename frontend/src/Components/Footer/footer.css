@@ -26,9 +26,10 @@
 }
 
 .hd-footer-brand p {
-  font-size: 0.95rem;
+  font-size: 0.99rem;
   line-height: 1.7;
-  color: 132b09;
+  font-weight: 500;
+  color: #132b09;
 }
 
 /* Sections */
