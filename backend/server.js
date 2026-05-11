@@ -56,14 +56,13 @@ app.use("/api/comment", commentRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/categories", categoryRoutes);
-app.use("/", sitemapRoutes);
 app.use("/api/blog",blogRoutes);
+app.use(sitemapRoutes);
 
+app.use(express.static(path.join(__dirname, "frontend/dist")));
 
-app.use(express.static(path.join(__dirname, "frontend/build")));
-
-app.use((req, res) => {
-   res.sendFile(path.join(__dirname, "frontend/build/index.html"));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend/dist/index.html"));
 });
 const PORT = process.env.PORT;
 app.listen(PORT, () =>
