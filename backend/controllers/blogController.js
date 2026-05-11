@@ -1,53 +1,90 @@
+import { Resend } from "resend";
 
-import nodemailer from 'nodemailer'
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const submitBlog = async(req,res)=>{
+export const submitBlog = async (req, res) => {
+  try {
+    const { title, category, tags, content, readingTime } = req.body;
 
-try{
+    const image = req.file?.filename;
 
-const {title,category,tags,content,readingTime} = req.body;
-const image = req.file?.filename;
+    // Validation
+    if (!title || !category || !content) {
+      return res.status(400).json({
+        success: false,
+        message: "Required fields are missing",
+      });
+    }
 
-const transporter = nodemailer.createTransport({
+    // Send Email
+    const data = await resend.emails.send({
+      from: "Blog Platform <onboarding@resend.dev>",
 
-service:"gmail",
+      // Admin Email
+      to: [process.env.ADMIN_EMAIL],
 
-auth:{
- user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-}
+      subject: "New Blog Submission",
 
-});
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px;">
 
-await transporter.sendMail({
+          <h2>📝 New Blog Submitted</h2>
 
-from:"Blog Platform",
-to:"homedecorimlaiba@gmail.com",
-subject:"New Blog Submission",
+          <p>
+            <strong>Title:</strong> ${title}
+          </p>
 
-html:`
+          <p>
+            <strong>Category:</strong> ${category}
+          </p>
 
-<h2>New Blog Submitted</h2>
+          <p>
+            <strong>Tags:</strong> ${tags || "N/A"}
+          </p>
 
-<p><b>Title:</b> ${title}</p>
-<p><b>Category:</b> ${category}</p>
-<p><b>Tags:</b> ${tags}</p>
-<p><b>Reading Time:</b> ${readingTime} min</p>
+          <p>
+            <strong>Reading Time:</strong> ${readingTime || 0} min
+          </p>
 
-<p><b>Content:</b></p>
-<p>${content}</p>
+          ${
+            image
+              ? `
+            <p>
+              <strong>Featured Image:</strong> ${image}
+            </p>
+          `
+              : ""
+          }
 
-`
+          <hr />
 
-});
+          <h3>Content</h3>
 
-res.json({message:"Blog submitted successfully"});
+          <div style="
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+          ">
+            ${content}
+          </div>
 
-}catch(err){
+        </div>
+      `,
+    });
 
-console.log(err);
-res.status(500).json({error:"Server error"});
+    return res.status(200).json({
+      success: true,
+      message: "Blog submitted successfully",
+      data,
+    });
+  } catch (err) {
+    console.error("RESEND ERROR:", err);
 
-}
-
+    return res.status(500).json({
+      success: false,
+      error: "Server error",
+      message: err.message,
+    });
+  }
 };
