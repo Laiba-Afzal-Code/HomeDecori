@@ -1,40 +1,70 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendContactEmail = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
 
+    // Validation
     if (!name || !email || !subject || !message) {
-      return res.status(400).json({ message: "All fields are required" });
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+      });
     }
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    // Send Email
+    const data = await resend.emails.send({
+      from: "Blog Contact <onboarding@resend.dev>",
 
-    await transporter.sendMail({
-      from: `"Blog Contact" <${process.env.EMAIL_USER}>`, // ✅ FIX
-      to: process.env.EMAIL_USER,
-      replyTo: email, // ✅ user email here
+      // Your admin email
+      to: [process.env.ADMIN_EMAIL],
+
+      // User email for replying directly
+      replyTo: email,
+
       subject: `Contact Form: ${subject}`,
+
       html: `
-        <h3>New Contact Message</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <div style="font-family: Arial, sans-serif; padding: 20px;">
+          <h2>New Contact Message</h2>
+
+          <p>
+            <strong>Name:</strong> ${name}
+          </p>
+
+          <p>
+            <strong>Email:</strong> ${email}
+          </p>
+
+          <p>
+            <strong>Subject:</strong> ${subject}
+          </p>
+
+          <p>
+            <strong>Message:</strong>
+          </p>
+
+          <div style="background:#f4f4f4;padding:15px;border-radius:8px;">
+            ${message}
+          </div>
+        </div>
       `,
     });
 
-    res.status(200).json({ message: "Email sent successfully" });
+    return res.status(200).json({
+      success: true,
+      message: "Email sent successfully",
+      data,
+    });
   } catch (error) {
-    console.error("EMAIL ERROR FULL:", error);
-    console.error("EMAIL MESSAGE:", error?.message);
-    console.error("EMAIL RESPONSE:", error?.response); // 👈 keep this
-    res.status(500).json({ message: "Failed to send email" });
+    console.error("RESEND ERROR:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Failed to send email",
+      error: error.message,
+    });
   }
 };
