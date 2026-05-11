@@ -21,7 +21,7 @@ router.get("/sitemap.xml", async (req, res) => {
     const baseUrl = "https://homedecorim.com";
 
     // ✅ Fetch blogs from your API
-    const response = await fetch("http://localhost:5000/api/posts/getallposts");
+    const response = await fetch("http://homedecorim.com/api/posts/getallposts");
     const data = await response.json();
 
     // Adjust depending on your API structure
