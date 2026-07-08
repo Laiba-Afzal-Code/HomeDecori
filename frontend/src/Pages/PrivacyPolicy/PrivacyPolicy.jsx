@@ -5,12 +5,15 @@ import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
+import useGsapReveal from "../../hooks/useGsapReveal";
+
 const PrivacyPolicy = () => {
+  useGsapReveal(".privacy-container")
   return (
     <>
       <Helmet>
         <title>Privacy Policy | Home Decorim</title>
-        <meta
+        <meta 
           name="description"
           content="Read the Privacy Policy of Home Decorim. Learn how we collect, use, and protect your personal data and cookies."
         />

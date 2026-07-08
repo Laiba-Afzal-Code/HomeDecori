@@ -14,6 +14,7 @@ import contactRoutes from "./routes/contactRoute.js";
 import blogRoutes  from "./routes/blogRoutes.js";
 import sitemapRoutes from './routes/sitemapRoutes.js'
 import { fileURLToPath } from "url";
+import naqshaRoutes from "./routes/naqshaRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,6 +26,7 @@ app.use(cors({
  origin: "*"
 }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // add this too
 
 // ⭐ VERY IMPORTANT (serve images)
 app.use("/uploads", express.static("uploads"));
@@ -49,6 +51,7 @@ res.send("API working");
 });
 
 // AI Room Design route
+app.use("/api/naqsha", naqshaRoutes);
 app.use("/api", aiimageRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/admin", adminRoutes);
@@ -61,7 +64,7 @@ app.use(sitemapRoutes);
 
 app.use(express.static(path.join(__dirname, "frontend/dist")));
 
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "frontend/dist/index.html"));
 });
 const PORT = process.env.PORT;

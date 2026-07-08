@@ -1,0 +1,42 @@
+.contact {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #aca9a9;
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgb(148, 146, 146);
+
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: linear-gradient(45deg, #0bc63a, #6366f1);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.contact-form button:active {
+  transform: scale(0.96);
+}
+
+.success {
+  color: #22c55e;
+}

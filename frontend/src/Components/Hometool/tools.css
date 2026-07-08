@@ -63,6 +63,7 @@
   display: flex;
   gap: 5px;
   margin-top: 10px;
+  text-align:center ;
 }
 
 /* COLOR BOX */
@@ -96,12 +97,13 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 /* SUBTITLE */
 .subtitle {
   font-size: 13px;
-  color: #666;
+  /* color: #666; */
   margin-bottom: 15px;
 }
 
@@ -124,7 +126,7 @@
 .furniture-name {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  /* color: #333; */
   font-family: "Lato", "Poppins", sans-serif;
 }
 
@@ -138,7 +140,7 @@
 .empty-text {
   margin-top: 15px;
   font-size: 13px;
-  color: #999;
+  /* color: #999; */
 }
 @media (max-width: 1024px) {
   .pagecard {

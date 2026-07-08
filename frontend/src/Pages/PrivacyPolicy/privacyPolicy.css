@@ -1,20 +1,21 @@
 /* Wrapper */
 .privacy-wrapper {
-  background: #f8fafc;
-  padding: 40px 16px;
+  padding: 100px 16px;
 }
 
 /* Container */
 .privacy-container {
   max-width: 900px;
   margin: auto;
-  background: #fff;
+  /* background: #fff; */
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   font-family: "Inter", sans-serif;
   line-height: 1.7;
+  border: 2px solid white;
 }
+
 
 /* Heading */
 .privacy-container h1 {
@@ -25,7 +26,7 @@
 
 .last-updated {
   font-size: 14px;
-  color: #666;
+  /* color: #666; */
   margin-bottom: 25px;
 }
 
@@ -38,14 +39,14 @@
   font-size: 20px;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #111;
+  /* color: #111; */
   text-align: left;
 }
 
 /* Text */
 .privacy-container p {
   font-size: 15px;
-  color: #444;
+  /* color: #444; */
 }
 
 /* Lists */

@@ -31,7 +31,11 @@ import { WallpaperCalculator } from "./Components/Hometool/WallpaperCalculator.j
 import { BudgetCalculator } from "./Components/Hometool/BudgetCalculator.jsx";
 import ToolsPage from "./Pages/Toolspage/Toolspage.jsx";
 import FurniturePlanner from "./Components/Hometool/FurniturePlanner.jsx";
-
+import NaqshaGenerator from "./Pages/NaqshaGenerator.jsx";
+import Portfolio from "./Pages/PortfolioPage/PortfolioPage.jsx";
+import ScrollProgress from "./Components/Portfolio components/ThemeToggle/ScrollProgress.jsx";
+import Scene2 from './Components/Scene2.jsx'
+import ThemeToggle from "./Components/Portfolio components/ThemeToggle/ThemeToggle.jsx";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -42,13 +46,20 @@ function App() {
   return (
     <>
       <div className="app">
+        <ScrollProgress />
+        <div className="appTheme">
+
+          <ThemeToggle />
+        </div>
         <ToastContainer />
+        <Scene2 />
 
         <Routes>
           <Route
             path="posts/:id/open/live/homedecorim/:slug"
             element={<BlogOpen />}
           />
+          <Route path="/my-portfolio" element={<Portfolio />} />
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/author/:authorId" element={<Author />} />
@@ -59,6 +70,7 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/loder" element={<PageLoader />} />
+          <Route path="/naqshagenerator" element={<NaqshaGenerator />} />
           <Route path="/categorylist" element={<HomeCategoryShowcase />} />
           <Route path="/write-with-us" element={<WriteWithUs />} />
           <Route
@@ -79,11 +91,11 @@ function App() {
             path="tools/budget-calculator"
             element={<BudgetCalculator />}
           />
-            <Route
-           path="tools/furniture-planner"
-           element={<FurniturePlanner />}
-         />
-            <Route
+          <Route
+            path="tools/furniture-planner"
+            element={<FurniturePlanner />}
+          />
+          <Route
             path="homedecorimTools/tools-hub"
             element={<ToolsPage />}
           />

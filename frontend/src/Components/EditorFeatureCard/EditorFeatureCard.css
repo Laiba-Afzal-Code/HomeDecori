@@ -4,7 +4,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  background: linear-gradient(135deg, #4a6ad44a, #48e9785b);
   padding: 60px 80px;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
@@ -27,14 +27,14 @@
 .hero-title {
   font-size: 48px;
   font-weight: 700;
-  color: #111827;
+  /* color: #40bd0a; */
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero-description {
   font-size: 18px;
-  color: #4b5563;
+  /* color: #40bd0a; */
   margin-bottom: 30px;
   max-width: 550px;
 }
@@ -49,7 +49,7 @@
 .hero-features li {
   margin-bottom: 12px;
   font-size: 16px;
-  color: #374151;
+  /* color: #40bd0a; */
 }
 
 /* Buttons */
@@ -62,11 +62,13 @@
   padding: 14px 28px;
   border-radius: 12px;
   border: none;
-  background: #132b09;
+  background: #40bd0a;
   color: white;
   font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
   transition: 0.3s ease;
+  border: 1px solid white;
 }
 
 .primary-btn:hover {
@@ -77,10 +79,11 @@
 .secondary-btn {
   padding: 14px 28px;
   border-radius: 12px;
-  border: 2px solid #132b09;
+  border: 2px solid #40bd0a;
   background: transparent;
-  color: #132b09;
+  color: #40bd0a;
   font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
   transition: 0.3s ease;
 }

@@ -8,11 +8,27 @@ const Topnav = () => {
     <>
       <div className="topnav">
         <div className="navsocial">
-          <div className="socilicon">
-            <Link
-              target="blank"
-              to={"https://www.facebook.com/profile.php?id=61582429130428"}
-            >
+          <Link
+            target="blank"
+            to={"https://github.com/Laiba-Afzal-Code/HomeDecori"}
+          >
+            <div className="socilicon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+                <path d="M0 0h48v48H0z" fill="none" />
+                <g fill="#132b09" fill-rule="evenodd" clip-rule="evenodd">
+                  <path d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20s20-8.954 20-20S35.046 4 24 4M0 24C0 10.745 10.745 0 24 0s24 10.745 24 24s-10.745 24-24 24S0 37.255 0 24" />
+                  <path d="M19.183 45.472q-.29-.375 0-6.674q-3.107.108-3.927-.431c-.819-.539-1.64-2.2-2.367-3.371s-2.343-1.356-2.995-1.618c-.652-.261-.816-1.328 1.797-.522c2.613.807 2.74 3.005 3.565 3.518c.825.514 2.796.29 3.689-.122s.827-1.944.987-2.551c.201-.567-.509-.693-.524-.697c-.873 0-5.454-.997-6.713-5.433c-1.258-4.437.363-7.337 1.228-8.583q.864-1.248-.153-5.314Q17.466 13.2 19.473 16c.002.01 1.756-1.043 4.527-1.043s3.755.858 4.514 1.043s1.366-3.266 6.053-2.326c-.979 1.923-1.798 4.326-1.173 5.314c.626.987 3.08 4.127 1.573 8.583q-1.509 4.455-5.929 5.433q-.506.162-.506.522c0 .36.456.399 1.114 2.086q.66 1.686.096 9.635q-1.427.363-2.22.488c-.937.147-1.955.23-2.955.261c-1 .032-1.347.029-2.73-.1a20 20 0 0 1-2.654-.424" />
+                </g>
+              </svg>
+
+
+            </div>
+          </Link>
+          <Link
+            target="blank"
+            to={"https://www.facebook.com/profile.php?id=61582429130428"}
+          >
+            <div className="socilicon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -26,15 +42,15 @@ const Topnav = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </Link>
-          </div>
-          <div className="socilicon">
-            <Link
-              target="blank"
-              to={
-                "https://www.linkedin.com/showcase/homedecorim/"
-              }
-            >
+            </div>
+          </Link>
+          <Link
+            target="blank"
+            to={
+              "https://www.linkedin.com/showcase/homedecorim/"
+            }
+          >
+            <div className="socilicon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -49,10 +65,10 @@ const Topnav = () => {
                   />
                 </g>
               </svg>
-            </Link>
-          </div>
-          <div className="socilicon">
-            <Link target="blank" to={"https://www.instagram.com/newscovry/"}>
+            </div>
+          </Link>
+          <Link target="blank" to={"https://www.instagram.com/home_decorim/"}>
+            <div className="socilicon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -64,8 +80,8 @@ const Topnav = () => {
                   d="M12.001 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6m0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10m6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0M12.001 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.9 2.9 0 0 0-1.08.703a2.9 2.9 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.007 9.075 4 9.461 4 12c0 2.475.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.475 0 2.878-.007 4.029-.058c.782-.037 1.308-.142 1.797-.331a2.9 2.9 0 0 0 1.08-.703c.337-.336.538-.649.704-1.08c.19-.492.296-1.018.332-1.8c.052-1.103.058-1.49.058-4.028c0-2.474-.007-2.878-.058-4.029c-.037-.782-.143-1.31-.332-1.798a2.9 2.9 0 0 0-.703-1.08a2.9 2.9 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.926 4.006 14.54 4 12 4m0-2c2.717 0 3.056.01 4.123.06c1.064.05 1.79.217 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122s-.01 3.056-.06 4.122s-.218 1.79-.465 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465c-1.067.047-1.406.06-4.123.06s-3.056-.01-4.123-.06c-1.064-.05-1.789-.218-2.427-.465a4.9 4.9 0 0 1-1.772-1.153a4.9 4.9 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.012 15.056 2 14.717 2 12s.01-3.056.06-4.122s.217-1.79.465-2.428a4.9 4.9 0 0 1 1.153-1.772A4.9 4.9 0 0 1 5.45 2.525c.637-.248 1.362-.415 2.427-.465C8.945 2.013 9.284 2 12.001 2"
                 />
               </svg>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
         <div className="navsocial">
           <svg
@@ -142,6 +158,15 @@ const Topnav = () => {
             </svg>
             <p className="conp">homedecorimlaiba@gmail.com</p>
           </div>
+          <Link to="/my-portfolio">
+            <div className="connav">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                <path d="M0 0h32v32H0z" fill="none" />
+                <path fill="none" stroke="#132b09" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29 17v11H3V17M2 8h28v8s-6 4-14 4s-14-4-14-4zm14 14v-4m4-10s0-4-4-4s-4 4-4 4" />
+              </svg>
+            </div>
+          </Link>
+
         </div>
       </div>
     </>

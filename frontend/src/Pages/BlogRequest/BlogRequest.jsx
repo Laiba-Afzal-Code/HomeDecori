@@ -39,14 +39,14 @@ export default function BlogRequest() {
     formData.append("content", content);
     formData.append("image", image);
     formData.append("readingTime", calculateReadingTime(content));
-setLoading(true)
+    setLoading(true)
     try {
       await axios.post("/blog/submit", formData);
 
       toast.success("Blog submitted for admin review!");
     } catch (err) {
       toast.error(err);
-    }finally{
+    } finally {
       setLoading(false);
 
     }
@@ -65,7 +65,8 @@ setLoading(true)
       <Navbar />
       <div className="editorPage">
         <div className="editorCard">
-          <h2 className="h2">Create Blog Post</h2>
+          <h2>Welcome to Decorim</h2>
+          <h3 className="h2">Submit your specific Blog Post Request Form by outlining your target audience, preferred keywords, and core topic ideas. Once we receive your details, our team will review and fulfill your requirements within 24 hours.</h3>
 
           <form onSubmit={handleSubmit} className="formblog">
             <input
@@ -111,7 +112,7 @@ setLoading(true)
             </p>
 
             <button type="submit" className="publishBtn" disabled={loading}>
-              {loading ? <ButtonLoader /> : "Submit Blog"}
+              {loading ? <ButtonLoader /> : "Submit your Request"}
             </button>
           </form>
         </div>

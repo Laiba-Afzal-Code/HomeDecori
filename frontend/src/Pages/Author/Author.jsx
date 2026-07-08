@@ -5,6 +5,7 @@ import "./author.css";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import cleanText from "../../utils/cleanText";
+import { PageLoader } from "../../utils/loading";
 
 const AuthorPage = () => {
   const { authorId } = useParams();
@@ -28,7 +29,13 @@ const AuthorPage = () => {
     fetchAuthorPosts();
   }, [authorId]);
 
-  if (loading) return <div className="loader" />;
+   if (loading) {
+    return (
+      <>
+        <PageLoader />
+      </>
+    );
+  }
 
   return (
     <>
@@ -58,7 +65,7 @@ const AuthorPage = () => {
 
             <div className="author-content">
               <p className="author-category">{post.category}</p>
-              <h2>{post.title}</h2>
+              <h2 className="author-title">{post.title}</h2>
               <p className="author-excerpt">
                {cleanText(post.content).slice(0, 50)}...
               </p>

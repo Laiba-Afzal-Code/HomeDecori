@@ -1,7 +1,7 @@
 import React from "react";
 import "./services.css";
 import { FaPaintRoller, FaLightbulb, FaHome, FaPenNib } from "react-icons/fa";
-
+import useGsapReveal from '../../hooks/useGsapReveal'
 const services = [
   {
     id: 1,
@@ -31,6 +31,7 @@ const services = [
 ];
 
 export default function Services() {
+  useGsapReveal('.service-grid')
   return (
     <section className="service-section">
       <h2 className="service-heading">What We Provide</h2>

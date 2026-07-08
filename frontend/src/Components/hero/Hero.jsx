@@ -4,10 +4,12 @@ import {
   FaHome,
   FaCouch,
   FaChair,
- 
   FaBlogger,
 } from "react-icons/fa";
+
+import useGsapReveal from "../../hooks/useGsapReveal";
 const Hero = () => {
+  useGsapReveal('.heroleft')
   return (
     <>
       <div className="hero">
@@ -28,8 +30,8 @@ const Hero = () => {
               created to make things simpler, better, and more beautiful. Our
               blog is here to help you learn, explore, and grow.
             </p>
-              <Link to={"/blogs"} className="a">
-            <button className="herobtn">
+              <Link to={"/blogs"} className="link">
+            <button className="heroobtn">
                 EXPLORE MORE
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,49 @@
+body {
+  background: white;
+  color: white;
+  font-family: sans-serif;
+}
+
+.naqsha-container {
+  padding: 40px;
+}
+
+.h1naqsha{
+  color: #22c55e;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-card {
+  background: #ffffff;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.form-card input,
+.form-card select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+.form-card button {
+  background: #22c55e;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.preview {
+  background: #111827;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #22c55e;
+}

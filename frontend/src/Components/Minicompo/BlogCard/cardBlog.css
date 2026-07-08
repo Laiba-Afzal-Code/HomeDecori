@@ -12,16 +12,12 @@
 *::after {
   box-sizing: border-box;
 }
-.catenav {
-  padding: 0px 60px;
-  display: block;
- 
-}
+
 .catenavh {
   font-size: 2rem;
   font-weight: 500;
   font-family: "Poppins", "Lato";
-  color: #132b09;
+  /* color: #e1f340; */
 }
 .navcat {
   /* padding: 5px; */
@@ -34,18 +30,7 @@
   list-style: none;
   padding: 0;
 }
-.cateli {
-  font-size: 16px;
-  font-weight: 500;
-  color: #132b09;
-  text-decoration: none;
-  font-family: "Poppins", "Lato";
-  padding: 5px 10px;
-}
-.cateli:hover {
-  color: #e1f340;
-  background-color: #132b09;
-}
+
 
 @media (max-width: 1024px) {
   .catenav {

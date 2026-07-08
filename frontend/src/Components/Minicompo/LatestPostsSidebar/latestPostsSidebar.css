@@ -1,6 +1,5 @@
 .latest-sidebar {
-  background: #f7f7f5;
-  /* padding: 25px; */
+  margin-top: 60px;
   border-radius: 18px;
   position: sticky;
   top: 100px;
@@ -9,9 +8,9 @@
 
 .sidebar-title {
   font-size: 1.4rem;
-  color: #132b09;
+  /* color: #132b09; */
   margin-bottom: 20px;
-  border-left: 4px solid #132b09;
+  border-left: 4px solid ;
   padding-left: 12px;
 }
 
@@ -28,6 +27,8 @@
   padding: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease;
+  background-color: #e3e0e041;
+  border: 1px solid white;
 }
 .latest-post-item:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -36,7 +37,7 @@
   display: flex;
   gap: 12px;
   text-decoration: none;
-  color: #132b09;
+  /* color: #132b09; */
   font-family: "Lato", sans-serif;
 }
 
@@ -49,7 +50,7 @@
 
 .latest-post-content h4 {
   font-size: 0.95rem;
-  color: #132b09;
+  /* color: #132b09; */
   margin: 0 ;
   font-family:  "Lato", sans-serif;
   line-height: 1.4;
@@ -58,7 +59,7 @@
 
 .latest-post-content span {
   font-size: 0.8rem;
-  color: #777;
+  /* color: #777; */
   font-family: "Lato", sans-serif;
   margin: 0;
 }

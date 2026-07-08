@@ -50,15 +50,15 @@ const ABview = () => {
           </p>
           <div className="info-cards">
             <div className="cardt">
-              <h3>Modern Wall Design</h3>
+              <h3 className="h3">Modern Wall Design</h3>
               <p>Use textures, accent walls, and color palettes to create visual depth and style.</p>
             </div>
             <div className="cardt">
-              <h3>Peaceful Layout</h3>
+              <h3 className="h3">Peaceful Layout</h3>
               <p>Minimal furniture and organized space promote relaxation and focus.</p>
             </div>
             <div className="cardt">
-              <h3>Inspired Living</h3>
+              <h3 className="h3">Inspired Living</h3>
               <p>Your surroundings influence your mind—curate a space that nurtures creativity and calm.</p>
             </div>
           </div>

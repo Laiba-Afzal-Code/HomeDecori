@@ -1,8 +1,9 @@
 import { useState } from "react";
 import userAxios from "../../utils/userAxios";
 import "./newsletter.css";
-
+import useGsapReveal from '../../hooks/useGsapReveal'
 const Newsletter = () => {
+  useGsapReveal('.newsletter')
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
@@ -43,7 +44,7 @@ const Newsletter = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <button type="submit" disabled={loading}>
+        <button className="newsbutton" type="submit" disabled={loading}>
           {loading ? "Subscribing..." : "Subscribe"}
         </button>
       </form>

@@ -15,7 +15,7 @@ const TextEditor = () => {
   const [fontSize, setFontSize] = useState(16);
   const [fontColor, setFontColor] = useState("#000000");
   const [bgColor, setBgColor] = useState("#ffffff");
-
+ 
   const history = useRef([]);
   const redoStack = useRef([]);
 
@@ -128,10 +128,10 @@ const TextEditor = () => {
           <meta name="robots" content="index, follow" />
         </Helmet>
 
-        <h1>
+        <h1 className="texth1">
           Welcome to the Homedecorim tool. We're glad to see you here. Enjoy it
         </h1>
-        <h2>Full-Featured Text Editor</h2>
+        <h2 className="texth2">Full-Featured Text Editor</h2>
 
         {/* Font & color controls */}
         <div className="controls">
@@ -181,21 +181,21 @@ const TextEditor = () => {
 
         {/* Buttons */}
         <div className="buttons-container">
-          <button onClick={handleUppercase}>Uppercase</button>
-          <button onClick={handleLowercase}>Lowercase</button>
-          <button onClick={handleBold}>{isBold ? "Unbold" : "Bold"}</button>
-          <button onClick={handleItalic}>
+          <button onClick={handleUppercase} className="button">Uppercase</button>
+          <button onClick={handleLowercase} className="button">Lowercase</button>
+          <button onClick={handleBold} className="button">{isBold ? "Unbold" : "Bold"}</button>
+          <button onClick={handleItalic} className="button">
             {isItalic ? "Unitalic" : "Italic"}
           </button>
-          <button onClick={handleRemoveExtraSpaces}>Remove Extra Spaces</button>
-          <button onClick={handleRemoveWrongWords}>Remove Wrong Words</button>
-          <button onClick={handleCopy}>Copy</button>
-          <button onClick={handleClear}>Clear</button>
-          <button onClick={handleUndo}>Undo</button>
-          <button onClick={handleRedo}>Redo</button>
-          <button onClick={handleDownloadPDF}>Download PDF</button>
-          <button onClick={handleDownloadTXT}>Download TXT</button>
-          <button onClick={handleDownloadDOCX}>Download DOCX</button>
+          <button onClick={handleRemoveExtraSpaces} className="button">Remove Extra Spaces</button>
+          <button onClick={handleRemoveWrongWords} className="button">Remove Wrong Words</button>
+          <button onClick={handleCopy} className="button">Copy</button>
+          <button onClick={handleClear} className="button">Clear</button>
+          <button onClick={handleUndo} className="button">Undo</button>
+          <button onClick={handleRedo} className="button">Redo</button>
+          <button onClick={handleDownloadPDF} className="button">Download PDF</button>
+          <button onClick={handleDownloadTXT} className="button">Download TXT</button>
+          <button onClick={handleDownloadDOCX} className="button">Download DOCX</button>
         </div>
 
         {/* Summary */}
@@ -233,10 +233,10 @@ const TextEditor = () => {
             installing any software.
           </p>
 
-          <div className="tool-card">
+          <div className="toolcard">
             <h2>Image Editor</h2>
 
-            <p>
+            <p className="textp">
               The Image Editor allows users to upload and modify images directly
               in the browser. It provides features such as format conversion,
               image compression, and basic editing tools. This makes it perfect
@@ -245,23 +245,23 @@ const TextEditor = () => {
             </p>
 
             <ul>
-              <li>Convert images to different formats (JPG, PNG, WEBP)</li>
-              <li>Compress images to reduce file size</li>
-              <li>Download optimized images instantly</li>
-              <li>Convert images to PDF format</li>
-              <li>Preview images before downloading</li>
+              <p>Convert images to different formats (JPG, PNG, WEBP)</p>
+              <p>Compress images to reduce file size</p>
+              <p>Download optimized images instantly</p>
+              <p>Convert images to PDF format</p>
+              <p>Preview images before downloading</p>
             </ul>
 
-            <p>
+            <p className="textp">
               The tool is fully browser-based, meaning your files stay secure
               and are not stored on any external servers.
             </p>
           </div>
 
-          <div className="tool-card">
+          <div className="toolcard">
             <h2>Text Editor</h2>
 
-            <p>
+            <p className="textp">
               The Text Editor is a simple yet powerful writing tool that helps
               users create, edit, and format text easily. It is ideal for
               writing blog posts, notes, or preparing content for websites and
@@ -269,14 +269,14 @@ const TextEditor = () => {
             </p>
 
             <ul>
-              <li>Write and edit text in a clean interface</li>
-              <li>Format text with headings, lists, and styles</li>
-              <li>Copy or download written content</li>
-              <li>Useful for bloggers and content creators</li>
-              <li>Fast and distraction-free writing environment</li>
+              <p>Write and edit text in a clean interface</p>
+              <p>Format text with headings, lists, and styles</p>
+              <p>Copy or download written content</p>
+              <p>Useful for bloggers and content creators</p>
+              <p>Fast and distraction-free writing environment</p>
             </ul>
 
-            <p>
+            <p className="textp">
               The editor provides a smooth writing experience and helps users
               focus on content creation without unnecessary distractions.
             </p>

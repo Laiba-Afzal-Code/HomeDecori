@@ -114,7 +114,7 @@ const Footer = () => {
               </ul>
             ))
           ) : (
-            <p>Preparing</p>
+            <p className="footP">Preparing</p>
           )}
         </div>
 
@@ -132,7 +132,7 @@ const Footer = () => {
               </ul>
             ))
           ) : (
-            <p>Preparing Category</p>
+            <p className="footP">Preparing Category</p>
           )}
         </div>
         {/* <div className="email">
@@ -160,7 +160,7 @@ const Footer = () => {
       {/* Bottom */}
       <Topnav />
       <div className="hd-footer-bottom">
-        <p>© {new Date().getFullYear()} HomeDecorim. All rights reserved.</p>
+        <p className="footP">© {new Date().getFullYear()} HomeDecorim. All rights reserved.</p>
       </div>
     </footer>
   );

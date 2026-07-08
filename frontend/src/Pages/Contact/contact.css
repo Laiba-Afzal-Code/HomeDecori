@@ -4,6 +4,7 @@
   /* object-fit: cover;
   background-position: bottom; */
 }
+
 .contact-container {
   max-width: 600px;
   margin: 60px auto;
@@ -17,6 +18,11 @@
   text-align: left;
   margin-bottom: 25px;
   font-size: 28px;
+}
+
+.contacth2 {
+  text-align: center;
+  color: #0f5132;
 }
 
 .contact-form {
@@ -63,7 +69,7 @@
 /* write with us  */
 .write-section {
   padding: 150px 20px;
-  background: #f8faf8;
+  /* background: #f8faf8; */
 }
 
 .write-container {
@@ -79,7 +85,7 @@
 
 .write-text h2 {
   font-size: 36px;
-  color: #0f5132;
+  /* color: #0f5132; */
   margin-bottom: 20px;
   font-family: "Lato" sans-serif;
 }
@@ -87,7 +93,7 @@
 .write-text p {
   font-size: 16px;
   line-height: 1.7;
-  color: #444;
+  /* color: #444; */
   margin-bottom: 15px;
   font-family: "Lato", "Poppins", sans-serif;
 }
@@ -97,15 +103,16 @@
 .contact-btn {
   margin-top: 20px;
   padding: 12px 20px;
-  background: #14532d;
-  color: white;
+  background: #39b812ac;
+  /* color: white; */
+  font-weight: 500;
   border: none;
+  border: 1px solid white;
   border-radius: 6px;
   font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
   margin: 5px;
-
   font-family: "Lato", "Poppins", sans-serif;
 }
 
@@ -122,12 +129,13 @@
 }
 
 .feature-card {
-  background: white;
+  background: rgba(55, 210, 8, 0.226);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
   font-family: "Lato", "Poppins", sans-serif;
+  border: 2px solid white;
 }
 
 .feature-card:hover {
@@ -135,14 +143,13 @@
 }
 
 .feature-card h3 {
-  color: #14532d;
+  /* color: #14532d; */
   margin-bottom: 10px;
 }
 
 .feature-card p {
-  color: #555;
+  /* color: #555; */
   font-size: 14px;
-
   font-family: "Lato", "Poppins", sans-serif;
 }
 

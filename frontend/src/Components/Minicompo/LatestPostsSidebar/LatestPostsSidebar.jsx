@@ -39,7 +39,7 @@ export default function LatestPostsSidebar() {
             <li key={post._id} className="latest-post-item">
               <Link
                 to={`/posts/${post._id}/open/live/homedecorim/${post.slug}`}
-                className="a"
+                className="link"
               >
                 <img
                   src={post.image}
@@ -47,12 +47,12 @@ export default function LatestPostsSidebar() {
                   className="latest-post-img"
                 />
                 <div className="latest-post-content">
-                  <h4>{post.title.slice(0, 100)}...</h4>
+                  <h4 className="sidecardt">{post.title.slice(0, 100)}...</h4>
                   {/* <p className="p">{cleanText(post.content).slice(0, 30)}...</p> */}
 
                   <div className="cated">
-                    <span>{new Date(post.createdAt).toLocaleDateString()}</span>
-                    <span>{post.category}</span>
+                    <span className="sidecardt">{new Date(post.createdAt).toLocaleDateString()}</span>
+                    <span className="sidecardt">{post.category}</span>
                   </div>
                 </div>
               </Link>

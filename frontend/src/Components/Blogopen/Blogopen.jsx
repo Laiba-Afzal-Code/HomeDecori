@@ -249,7 +249,7 @@ export default function BlogOpen() {
       <div className="blogOpenPage">
         {/* MAIN CONTENT */}
         <main className="blogMain">
-          <Link to={`/category/${post.category}`} className="a">
+          <Link to={`/category/${post.category}`} className="a catename">
             <p className="category">{post.category}</p>
           </Link>
           <h1 className="blogTitle">{post.title}</h1>
@@ -257,7 +257,7 @@ export default function BlogOpen() {
           <div className="metablog">
             <p className="blogMeta">
               By •
-              <Link to={`/author/${post.author._id}`} className="a">
+              <Link to={`/author/${post.author._id}`} className="a autorname">
                 Decorim-Author
               </Link>
               • {new Date(post.createdAt).toDateString()}
@@ -343,9 +343,9 @@ export default function BlogOpen() {
           <div className="sidebarBox">
             <h3>Categories</h3>
             {Categories.map((c) => (
-              <ul key={c._id}>
-                <Link to={`/category/${c.slug}`} className="a">
-                  <li className="cate">{c.name}</li>
+              <ul key={c._id} className="cateul">
+                <Link to={`/category/${c.slug}`} className="catename">
+                  <li className="cateblog">{c.name}</li>
                 </Link>
               </ul>
             ))}

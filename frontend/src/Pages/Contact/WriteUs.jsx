@@ -4,7 +4,10 @@ import "./contact.css";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 
+import useGsapReveal from "../../hooks/useGsapReveal";
+
 const WriteWithUs = () => {
+  useGsapReveal(".write-container")
   const navigate = useNavigate();
 
   const goToContact = () => {

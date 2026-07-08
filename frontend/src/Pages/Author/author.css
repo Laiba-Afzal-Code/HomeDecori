@@ -1,7 +1,7 @@
 .author-page {
   max-width: 1200px;
   margin: auto;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 /* Header */
@@ -32,7 +32,7 @@
 }
 
 .author-meta {
-  color: #777;
+  /* color: #777; */
   margin-top: 6px;
   font-family: "Lato", sans-serif;
 }
@@ -46,11 +46,12 @@
 
 /* Card */
 .author-card {
-  background: #fff;
+  background: #ffffff36;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  border: 1px solid white;
 }
 
 .author-card:hover {
@@ -64,8 +65,9 @@
 }
 
 .author-content {
-  padding: 20px;
+  padding: 10px 20px;
   font-family: "Lato", sans-serif;
+  margin: 0px
 }
 
 .author-category {
@@ -75,22 +77,32 @@
   margin-bottom: 6px;
 }
 
-.author-content h2 {
+.author-content .author-title {
   font-size: 20px;
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
+  text-align: left;
 }
 
 .author-excerpt {
-  color: #555;
+  /* color: #555; */
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 14px;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines */
+  -webkit-box-orient: vertical;
+  word-break: break-word;
 }
 
 .read-more {
   font-weight: 600;
-  color: #000;
+  /* color: #000; */
   text-decoration: none;
 
   font-family: "Lato", sans-serif;
@@ -98,6 +110,7 @@
 
 .read-more:hover {
   text-decoration: underline;
+  color: green;
 }
 
 /* Responsive */

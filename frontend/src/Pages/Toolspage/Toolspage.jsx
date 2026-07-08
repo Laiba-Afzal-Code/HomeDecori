@@ -4,7 +4,14 @@ import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import EditorHeroSection from "../../Components/EditorFeatureCard/EditorHeroSection";
 
+
+import useGsapReveal from "../../hooks/useGsapReveal";
 export default function ToolsPage() {
+ 
+   useGsapReveal(".tools-title" )
+   useGsapReveal('.tools-grid')
+    useGsapReveal('.tools-seo')
+    useGsapReveal("p")
   const tools = [
     {
       title: "Room Size Calculator",
@@ -45,54 +52,54 @@ export default function ToolsPage() {
 
   return (
     <>
-    <Navbar/>
-    <div className="tools-page">
+      <Navbar />
+      <div className="tools-page">
 
-      {/* HERO */}
-      <div className="tools-hero">
-        <h1 className="tools-title">Free HomeDecorim Tools</h1>
-        <p className="tools-subtitle">
-          Design, plan, and upgrade your home with smart free tools
-        </p>
+        {/* HERO */}
+        <div className="tools-hero">
+          <h1 className="tools-title">Free HomeDecorim Tools</h1>
+          <p className="tools-subtitle">
+            Design, plan, and upgrade your home with smart free tools
+          </p>
 
-        <div className="tools-search-note">
-          ⚡ No signup required • Instant results • 100% free tools
+          <div className="tools-search-note">
+            ⚡ No signup required • Instant results • 100% free tools
+          </div>
+        </div>
+
+        {/* GRID */}
+        <div className="tools-grid">
+          {tools.map((tool, index) => (
+            <Link to={tool.path} className="tool-card" key={index}>
+
+              <div className="tool-top">
+                <span className="tool-tag">{tool.tag}</span>
+                <span className="tool-icon">{tool.icon}</span>
+              </div>
+
+              <h3 className="tool-name">{tool.title}</h3>
+              <p className="tool-desc">{tool.desc}</p>
+
+              <div className="tool-footer">
+                <span className="tool-cta">Use Tool →</span>
+              </div>
+
+            </Link>
+          ))}
+        </div>
+        <EditorHeroSection />
+
+        {/* SEO CONTENT BLOCK (VERY IMPORTANT) */}
+        <div className="tools-seo">
+          <h2 className="toolh2">Why Use HomeDecorim Tools?</h2>
+          <p className="toolp">
+            HomeDecorim tools help you design your home smarter. From calculating room size
+            to planning furniture layout and choosing color palettes, these tools are built
+            for homeowners, renters, and interior design lovers who want fast and accurate results.
+          </p>
         </div>
       </div>
-
-      {/* GRID */}
-      <div className="tools-grid">
-        {tools.map((tool, index) => (
-          <Link to={tool.path} className="tool-card" key={index}>
-
-            <div className="tool-top">
-              <span className="tool-tag">{tool.tag}</span>
-              <span className="tool-icon">{tool.icon}</span>
-            </div>
-
-            <h3 className="tool-name">{tool.title}</h3>
-            <p className="tool-desc">{tool.desc}</p>
-
-            <div className="tool-footer">
-              <span className="tool-cta">Use Tool →</span>
-            </div>
-
-          </Link>
-        ))}
-      </div>
-<EditorHeroSection/>
-
-      {/* SEO CONTENT BLOCK (VERY IMPORTANT) */}
-      <div className="tools-seo">
-        <h2>Why Use HomeDecorim Tools?</h2>
-        <p>
-          HomeDecorim tools help you design your home smarter. From calculating room size
-          to planning furniture layout and choosing color palettes, these tools are built
-          for homeowners, renters, and interior design lovers who want fast and accurate results.
-        </p>
-      </div>
-    </div>
-    <Footer/>
+      <Footer />
     </>
   );
 }

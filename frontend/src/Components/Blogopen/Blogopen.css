@@ -29,15 +29,15 @@ body {
 .category {
   font-size: 18px;
   font-weight: 600;
-  color: #132b09;
+  /* color: #132b09; */
   cursor: pointer;
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
 }
 .blogTitle {
   font-size: 3rem;
-  color: #132b09;
-  color: black;
+  /* color: #132b09; */
+  /* color: black; */
   font-family: "Lato", sans-serif;
   word-wrap: break-word;
   font-weight: 700;
@@ -50,7 +50,7 @@ body {
   position: absolute;
   top: -8px;
   right: -5px;
-  color: rgb(3, 138, 3);
+  /* color: rgb(3, 138, 3); */
   font-weight: bold;
   /* background-color: #c4e7b682; */
   margin: 0;
@@ -59,7 +59,7 @@ body {
 
 .blogMeta {
   margin: 10px 0 20px;
-  color: gray;
+  /* color: gray; */
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -89,11 +89,17 @@ h3 {
 }
 
 .a {
-  color: darkgreen;
+  color: rgb(7, 202, 7);
+}
+.autorname:hover{
+  text-decoration: underline;
+} 
+.catename:hover{
+  text-decoration: underline;
 }
 .p {
   font-family: "Lato", "Poppins", sans-serif;
-  color: black;
+  /* color: black; */
 }
 
 .blogDesc {
@@ -103,6 +109,7 @@ h3 {
   font-family: "Lato", sans-serif;
   max-width: 90%;
   color: #132b09;
+  background-color: none;
 }
 
 
@@ -123,7 +130,7 @@ h3 {
   height: 42px;
   min-width: 42px;
   border-radius: 50%;
-  background: #132b09;
+  background: #287a05;
   color: #fff;
   display: flex;
   align-items: center;
@@ -137,19 +144,21 @@ h3 {
   padding: 12px;
   border-radius: 8px;
   font-family: "Lato", sans-serif;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   resize: vertical;
 }
 
 .commentForm button {
   margin-top: 10px;
-  padding: 10px 26px;
+  padding: 10px 46px;
   background: #132b09;
   color: #fff;
-  border: none;
+
   border-radius: 6px;
   font-family: "Lato", sans-serif;
   cursor: pointer;
+  border: 1px solid white;
+  font-weight: 500;
 }
 
 /* SIDEBAR */
@@ -162,14 +171,19 @@ h3 {
 }
 
 .sidebarBox {
-  background: #fafafa;
+  background: #fafafa58;
   padding: 20px;
   font-family: "Lato", sans-serif;
   border-radius: 12px;
   margin-bottom: 20px;
+  border: 1px solid white;
+  box-shadow:0 2px 2px rgba(151, 149, 149, 0.281);
 }
-.cate {
-  color: #132b09;
+.cateul{
+  list-style: none;
+}
+.cateblog {
+  /* color: #2f860a; */
 }
 /* LOADING */
 .loading {
@@ -222,6 +236,7 @@ h3 {
   display: flex;
   gap: 14px;
   margin-bottom: 20px;
+  outline: none;
   position: relative;
   /* BOX SHADOW */
 }
@@ -243,7 +258,7 @@ h3 {
 
 /* COMMENT BODY */
 .commentBody {
-  background: #fafafa;
+  background: white;
   padding: 14px 16px;
   border-radius: 12px;
   width: 100%;
@@ -258,6 +273,7 @@ h3 {
   display: block;
   font-family: "Poppins", sans-serif;
   margin-bottom: 6px;
+  color: #132b09;
 }
 
 .commentBody p {
@@ -265,6 +281,7 @@ h3 {
   font-family: "Lato", sans-serif;
   line-height: 1.6;
   word-break: break-word;
+  color: #132b09;
 }
 
 /* ACTIONS */
@@ -280,6 +297,7 @@ h3 {
   color: #132b09;
   font-weight: 500;
   font-family: "Lato", sans-serif;
+  border: 1px solid white;
 }
 
 .commentActions span:hover {

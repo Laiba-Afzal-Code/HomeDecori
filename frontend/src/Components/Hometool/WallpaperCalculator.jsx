@@ -19,7 +19,7 @@ export function WallpaperCalculator() {
      <div className="pagecard">
 
     <div className="card">
-      <h2>Wallpaper Estimator</h2>
+      <h2 className="title">Wallpaper Estimator</h2>
 
       <input className="input" placeholder="Height (ft)" onChange={(e) => setH(e.target.value)} />
       <input className="input" placeholder="Width (ft)" onChange={(e) => setW(e.target.value)} />

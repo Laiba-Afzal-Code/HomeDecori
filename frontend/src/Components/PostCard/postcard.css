@@ -1,7 +1,9 @@
 .postcard {
-  padding: 10px 60px;
+  padding: 10px 50px;
+  margin: 100px 0px;
   height: 100vh;
 }
+
 .cardtop {
   width: 80%;
   display: flex;
@@ -11,26 +13,30 @@
   gap: 6px;
   padding-bottom: 50px;
 }
+
 .cardhead {
   font-size: 3rem;
-  color: #132b09;
+  /* color: #40bd0a; */
   font-weight: 600;
   font-family: "Poppins", "Lato";
   text-align: center;
   margin: 0;
 }
+
 .topp {
   font-size: 20px;
   font-family: "Lato";
   margin: 0;
-  color: #132b09;
+  /* color: #40bd0a; */
   text-align: center;
 }
 
 .cardpost {
   display: flex;
   height: 70%;
+  border: 2px solid #e1f340;
 }
+
 .carpi {
   flex: 2;
   width: 800px;
@@ -45,19 +51,18 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.7)
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.7));
 }
+
 .logocard {
   padding-left: 50px;
 }
 
 .cardcontent {
   flex: 1;
-  background-color: #cdefbe;
+  background-color: #eef0ee50;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -66,31 +71,36 @@
   position: relative;
   /* max-width: 700px; */
 }
+
 .catecard {
   font-size: 14px;
   font-family: "Lato";
   text-transform: uppercase;
-  color: rgb(5, 130, 10);
+  /* color: white; */
   font-weight: 600;
   text-align: left;
   /* margin: 0; */
 }
+
 .cardheadp {
   font-size: 1.2rem;
-  color: #132b09;
+  /* color: #132b09; */
   font-family: "Poppins", "Lato";
   margin: 0;
   text-transform: uppercase;
   padding-bottom: 20px;
+  padding-top: 10px;
   text-align: left;
 }
+
 p.p {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Lato";
   font-weight: 500;
-  color: #132b09;
+  /* color: #132b09; */
   margin: 0px;
 }
+
 .info {
   display: flex;
   align-items: center;
@@ -98,10 +108,11 @@ p.p {
   gap: 15px;
   padding-top: 8px;
 }
+
 .timep {
   font-family: "Poppins";
   font-weight: 500;
-  color: #132b09;
+  /* color: #132b09; */
   font-size: 14px;
   margin: 0;
 }
@@ -128,9 +139,10 @@ p.p {
 
   left: 5%;
 }
+
 .dot {
   padding: 5px;
-  
+
 }
 
 @media (max-width: 1024px) {
@@ -156,13 +168,16 @@ p.p {
     padding: 20px;
   }
 }
+
 @media (max-width: 848px) {
   .postcard {
     padding: 10px 20px;
   }
+
   .p {
     display: none;
   }
+
   .cardpost {
     flex-direction: column;
     height: 100px;
@@ -184,6 +199,7 @@ p.p {
     gap: 0;
     flex-wrap: wrap;
   }
+
   .cardp {
     padding: 20px;
     max-width: 600px;
@@ -203,6 +219,7 @@ p.p {
     justify-content: center;
   }
 }
+
 @media (max-width: 480px) {
   .cardhead {
     font-size: 1.8rem;

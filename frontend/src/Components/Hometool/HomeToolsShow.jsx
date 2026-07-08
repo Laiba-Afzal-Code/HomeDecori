@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import "./hometools.css";
-
+import useGsapReveal from '../../hooks/useGsapReveal'
 export default function HomeToolsshow() {
+  useGsapReveal('.home-tools-section')
   const tools = [
     {
       title: "Room Size Calculator",

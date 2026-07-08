@@ -10,11 +10,13 @@
   margin: 0 auto;
   left: 0px;
   right: 0px;
+  border: 1px solid #e1f340;
 }
 
 .newsletter h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  text-align: center;
   color: white;
 }
 
@@ -33,7 +35,7 @@
   flex-wrap: wrap;
 }
 
-.newsletter input {
+.newsletter-form input {
   padding: 12px;
   width: 280px;
   border-radius: 5px;
@@ -41,7 +43,7 @@
   outline: none;
 }
 
-.newsletter button {
+.newsletter .newsbutton {
   padding: 12px 20px;
   background: white;
   color: #132b09;
@@ -51,7 +53,7 @@
   font-weight: 600;
 }
 
-.newsletter button:hover {
+.newsletter .newsbutton:hover {
   background: #e1f340;
 }
 

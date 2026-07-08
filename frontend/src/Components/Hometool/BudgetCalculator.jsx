@@ -17,7 +17,7 @@ export function BudgetCalculator() {
      <div className="pagecard">
 
     <div className="card">
-      <h2>Budget Calculator</h2>
+      <h2 className="title">Budget Calculator</h2>
 
       <input className="input" placeholder="Total Budget" onChange={(e) => setBudget(e.target.value)} />
       <input className="input" placeholder="Spent Amount" onChange={(e) => setSpent(e.target.value)} />

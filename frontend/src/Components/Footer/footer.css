@@ -74,7 +74,9 @@
   font-size: 0.85rem;
   color: #132b09;
 }
-
+.footP{
+  color: #132b09;
+}
 /* Responsive */
 @media (max-width: 900px) {
   .hd-footer-container {

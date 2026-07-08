@@ -3,14 +3,17 @@ import "./contact.css";
 import userAxios from "../../utils/userAxios";
 import Navbar from '../../Components/Minicompo/Navbar/Navbar.jsx';
 import Footer from '../../Components/Footer/Footer.jsx';
+
+
+import useGsapReveal from "../../hooks/useGsapReveal";
 import {
   FaHome,
   FaCouch,
   FaChair,
- 
   FaBlogger,
 } from "react-icons/fa";
 const Contact = () => {
+  useGsapReveal(".contact-container")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,7 +55,7 @@ const Contact = () => {
                        <FaBlogger className="icon blogicon"/>
                     </div>
       <div className="contact-container">
-        <h2>Contact Us</h2>
+        <h2 className="contacth2">Contact Us</h2>
 
         <form onSubmit={handleSubmit} className="contact-form">
           <input

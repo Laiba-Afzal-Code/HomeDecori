@@ -1,22 +1,23 @@
 .editorPage{
 min-height:100vh;
-background:#f5f7fa;
 display:flex;
 justify-content:center;
-padding: 100px 40px;
+
+padding: 120px 40px;
 }
 
 .editorCard{
 width:900px;
-background:rgb(188, 187, 187);
+background:rgba(188, 187, 187, 0.562);
 padding:40px;
 border-radius:15px;
 box-shadow:0 10px 40px rgba(0,0,0,0.1);
+border: 2px solid white;
 }
 
 .editorCard .h2{
 margin-bottom:20px;
-color:#2e7d32;
+/* color:#2e7d32; */
 }
 .formblog{
 display:flex;
@@ -40,12 +41,14 @@ margin-top:10px;
 
 .publishBtn{
 padding:14px;
-background:#2e7d32;
+background:#2e7d32c6;
 color:white;
 border:none;
 border-radius:8px;
 font-size:16px;
 cursor:pointer;
+font-weight: 500;
+border: 1px solid white ;
 }
 
 .publishBtn:hover{
@@ -54,5 +57,5 @@ background:#1b5e20;
 
 .readingTime{
 font-size:14px;
-color:#777;
+/* color:#777; */
 }

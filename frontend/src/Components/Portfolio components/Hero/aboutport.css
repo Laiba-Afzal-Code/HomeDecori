@@ -1,0 +1,193 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 10%;
+  gap: 40px;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+}
+
+.about-card {
+  background: linear-gradient(145deg, rgba(56,189,248,0.1), rgba(99,102,241,0.1));
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.155);
+}
+
+.about-card h2 {
+  color: #0bc63a;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  color: #96999c;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.stats h3 {
+  color: #0bc63a;
+  font-size: 24px;
+}
+
+.stats p {
+  color: #94a3b8;
+}
+
+.glass-box {
+  background: linear-gradient(45deg, #0bc63ac8, #6365f194);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.glass-box h3 {
+  color: #06962a;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.glass-box ul {
+  /* list-style: none; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.glass-box ul li {
+  /* padding: 8px 0; */
+  color: #dadddf;
+  font-size: 16px;
+  margin:0px;
+  display: flex;
+} 
+/* =========================
+   TABLET (1024px and below)
+========================= */
+@media (max-width: 1024px) {
+  .about {
+    padding: 80px 6%;
+    gap: 30px;
+  }
+
+  .about-card,
+  .glass-box {
+    padding: 25px;
+  }
+
+  .stats h3 {
+    font-size: 22px;
+  }
+
+  .glass-box h3 {
+    font-size: 22px;
+  }
+}
+
+/* =========================
+   TABLET & LARGE MOBILE (768px and below)
+========================= */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 70px 5%;
+    gap: 30px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-card,
+  .glass-box {
+    padding: 20px;
+  }
+
+  .about-card h2,
+  .glass-box h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .about-card p {
+    text-align: center;
+  }
+
+  .stats {
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .glass-box ul {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .glass-box ul li {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   MOBILE (480px and below)
+========================= */
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 4%;
+  }
+
+  .about-card,
+  .glass-box {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .about-card h2,
+  .glass-box h3 {
+    font-size: 22px;
+  }
+
+  .about-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .stats {
+    gap: 20px;
+  }
+
+  .stats h3 {
+    font-size: 20px;
+  }
+
+  .stats p {
+    font-size: 14px;
+  }
+
+  .glass-box ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .glass-box ul li {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+  }
+}

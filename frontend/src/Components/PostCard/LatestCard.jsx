@@ -55,7 +55,7 @@ export default function LatestCard() {
                   {post.title}...
                 </h3>
                 {/* Optional excerpt */}
-                <p  className="horizontal-post-card__excerpt">{cleanText(post.content).slice(0, 160)}...</p>
+                <p  className="horizontal-post-card__excerpt">{cleanText(post.content).slice(0, 200)}...</p>
               </div>
             </Link>
           ))}

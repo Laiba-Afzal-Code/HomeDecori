@@ -16,7 +16,7 @@ export function RoomCalculator() {
      <div className="pagecard">
 
     <div className="card">
-      <h2>Room Size Calculator</h2>
+      <h2 className="title">Room Size Calculator</h2>
 
       <input className="input" placeholder="Length (ft)" value={l} onChange={(e) => setL(e.target.value)} />
       <input className="input" placeholder="Width (ft)" value={w} onChange={(e) => setW(e.target.value)} />

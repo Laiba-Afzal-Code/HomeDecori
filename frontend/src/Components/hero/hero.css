@@ -6,7 +6,7 @@
 }
 .heroR {
   flex: 1;
-  background-color: #e1f340;
+  background-color: #e1f340e0;
   padding-top: 100px;
   padding-right: 70px;
 }
@@ -59,7 +59,7 @@
   background-repeat: no-repeat;
 }
 .heroleft {
-  padding-top: 200px;
+  padding-top: 130px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -93,7 +93,7 @@
 .a {
   text-decoration: none;
 }
-.herobtn {
+.heroobtn {
   color: #132b09;
   display: flex;
   align-items: center;
@@ -107,10 +107,11 @@
   font-weight: 550;
   font-size: 18px;
   margin-top: 10px;
-  border: 2px solid #e1f340;
+  border: 2px solid #132b09;
 }
-.herobtn:hover {
-  background-color:#e1f3405e ;
+.heroobtn:hover {
+  color: #e1f340;
+  background-color:#636b175e ;
   border: 2px solid #e1f340;
 }
 

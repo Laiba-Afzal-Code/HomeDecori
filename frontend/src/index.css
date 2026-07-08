@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.body {
+  background: white;
+  color: white;
+  overflow-x: hidden;
+  font-family: "Poppins", "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  /* padding: 80px 10%; */
+}

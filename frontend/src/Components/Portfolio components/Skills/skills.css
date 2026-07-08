@@ -1,0 +1,352 @@
+.skills {
+  padding: 100px 10%;
+  text-align: center;
+  /* background: linear-gradient(45deg, #06962a, #1618b1); */
+   /* background: linear-gradient(45deg, #024f15c8, #03056b94); */
+}
+
+.skills .section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #06962a;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+  /* Skill Card */
+}
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(45deg, #024f15c8, #03056b94);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* Initial Animation */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 0.8s ease forwards;
+
+  transition: transform .4s ease,
+              box-shadow .4s ease,
+              border-color .4s ease;
+}
+
+/* Stagger Animation */
+.skill-card:nth-child(1) { animation-delay: .1s; }
+.skill-card:nth-child(2) { animation-delay: .2s; }
+.skill-card:nth-child(3) { animation-delay: .3s; }
+.skill-card:nth-child(4) { animation-delay: .4s; }
+.skill-card:nth-child(5) { animation-delay: .5s; }
+.skill-card:nth-child(6) { animation-delay: .6s; }
+.skill-card:nth-child(7) { animation-delay: .7s; }
+.skill-card:nth-child(8) { animation-delay: .8s; }
+
+/* Hover Effect */
+.skill-card:hover {
+  transform: translateY(-12px) scale(1.04);
+  border-color: #0bc63a;
+  box-shadow:
+    0 15px 40px rgba(11, 198, 58, 0.25),
+    0 0 30px rgba(56, 189, 248, 0.25);
+}
+
+/* Shine Effect */
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transition: .8s;
+}
+
+.skill-card:hover::before {
+  left: 150%;
+}
+
+/* Floating Icon Animation (if card contains an icon) */
+.skill-card i,
+.skill-card svg,
+.skill-card img {
+  transition: transform .4s ease;
+}
+
+.skill-card:hover i,
+.skill-card:hover svg,
+.skill-card:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+}
+
+.skill-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  color: #cbd5e1;
+  text-align: left
+  ;
+}
+
+
+
+
+/* services portfolio css  */
+.services {
+  padding: 100px 10%;
+  text-align: center;
+
+}
+.services .section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #06962a;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.serviceport-card {
+  background: linear-gradient(145deg, rgba(56,189,248,0.1), rgba(99,102,241,0.1));
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #38bdf8;;
+  transition: 0.3s;
+
+}
+/* Service Card */
+.serviceport-card {
+  background: linear-gradient(145deg, rgba(56, 189, 248, 0.1), rgba(99, 102, 241, 0.1));
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #38bdf8;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(60px);
+  animation: fadeUp 0.8s ease forwards;
+
+  transition: transform .4s ease,
+              box-shadow .4s ease,
+              border-color .4s ease;
+}
+
+/* Stagger Animation */
+.serviceport-card:nth-child(1) { animation-delay: .1s; }
+.serviceport-card:nth-child(2) { animation-delay: .3s; }
+.serviceport-card:nth-child(3) { animation-delay: .5s; }
+.serviceport-card:nth-child(4) { animation-delay: .7s; }
+
+/* Hover Effect */
+.serviceport-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: #0bc63a;
+  box-shadow:
+      0 15px 40px rgba(11, 198, 58, 0.3),
+      0 0 30px rgba(56, 189, 248, 0.2);
+}
+
+/* Animated Gradient Shine */
+.serviceport-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.35),
+    transparent
+  );
+  transition: .80s;
+}
+
+.serviceport-card:hover::before {
+  left: 150%;
+}
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.serviceport-card:hover {
+  transform: scale(1.05);
+}
+
+.serviceport-card h3 {
+  color: #06962a;
+  margin-bottom: 10px;
+}
+
+.serviceport-card p {
+  color: #74787d;
+  text-align: left;
+} 
+/* =========================
+   TABLET (1024px and below)
+========================= */
+@media (max-width: 1024px) {
+
+  .skills,
+  .services {
+    padding: 80px 6%;
+  }
+
+  .skills .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .skill-card,
+  .service-card {
+    padding: 25px;
+  }
+}
+
+/* =========================
+   TABLET & LARGE MOBILE (768px and below)
+========================= */
+@media (max-width: 768px) {
+
+  .skills,
+  .services {
+    padding: 70px 5%;
+  }
+
+  .skills .section-title {
+    font-size: 28px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill-card,
+  .service-card {
+    padding: 22px;
+  }
+
+  .skill-card h3,
+  .service-card h3 {
+    font-size: 22px;
+  }
+
+  .skill-card p,
+  .service-card p {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   MOBILE (480px and below)
+========================= */
+@media (max-width: 480px) {
+
+  .skills,
+  .services {
+    padding: 60px 4%;
+  }
+
+  .skills .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .skill-card,
+  .service-card {
+    padding: 18px;
+  }
+
+  .skill-card h3,
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .skill-card p,
+  .service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

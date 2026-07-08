@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import Search from "./Search";
 import logo from "../../../assets/homedecor.svg";
 import userimg from "../../../assets/user.jpg";
+// import ThemeToggle from '../../Portfolio components/ThemeToggle/ThemeToggle'
 const Navbar = ({ searchTerm, setSearchTerm }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   // const [searchTerm, setSearchTerm] = useState("");
@@ -84,6 +85,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
                 DecorimTools
               </NavLink>
             </li>
+            {/* <ThemeToggle/> */}
           </ul>
 
           <div className="navbtn">

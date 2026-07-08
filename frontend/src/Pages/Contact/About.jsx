@@ -4,7 +4,10 @@ import Navbar from "../../Components/Minicompo/Navbar/Navbar";
 import "./About.css";
 import { FaHome, FaCouch, FaChair, FaBlogger } from "react-icons/fa";
 
+
+import useGsapReveal from "../../hooks/useGsapReveal";
 const About = () => {
+  useGsapReveal('.about-hero', '.about-text', )
   return (
     <>
       <Navbar />

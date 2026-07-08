@@ -19,7 +19,7 @@ export function ColorPalette() {
       <div className="pagecard">
 
       <div className="card">
-        <h2>Color Palette Generator</h2>
+        <h2 style={{textAlign: "center"}}>Color Palette Generator</h2>
 
         <button className="button" onClick={generate}>Generate Colors</button>
 

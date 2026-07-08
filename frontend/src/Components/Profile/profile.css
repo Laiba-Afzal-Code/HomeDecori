@@ -6,7 +6,7 @@
 }
 
 .profile-card {
-  background: #fff;
+  background: #ffffff46;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -15,6 +15,7 @@
   text-align: center;
   font-family: "Lato", sans-serif;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid white;
 }
 
 .profile-card .avatar {
@@ -28,7 +29,7 @@
 .logout {
   border: 2px solid darkgreen;
   padding: 8px 16px;
-  color: darkgreen;
+  /* color: darkgreen; */
   cursor: pointer;
   border-radius: 12px;
   font-size: 16px;
