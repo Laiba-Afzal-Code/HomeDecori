@@ -5,7 +5,7 @@
 
 .section-title {
   font-size: 36px;
-  color: #38bdf8;
+  /* color: #06962a; */
   margin-bottom: 30px;
 }
 
@@ -69,12 +69,12 @@
 }
 
 .project-content h3 {
-  color: #38bdf8;
+  /* color: #38bdf8; */
   font-family: 'Poppins', sans-serif;
 }
 
 .project-content p {
-  color: #787c81;
+  /* color: #787c81; */
   font-size: 14px;
   margin: 10px 0;
 }

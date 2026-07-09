@@ -4,19 +4,24 @@
 
 .testimonials {
   padding: 60px 10%;
-  text-align: center;background-image:
+  text-align: center;
+  /* background-image:
   linear-gradient(
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.55)
+    rgba(0, 0, 0, 0.279),
+    rgba(0, 0, 0, 0.687)
   ),
   url("../../../assets/testimonial.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-   border: 1px solid #0aa7ea;
+  background-size: cover; */
+ 
+   border: 3px solid rgb(13, 206, 61);
    /* background: rgba(255, 255, 255, 0.217); */
    margin: 100px;
    border-radius: 0 0 34% 34%;
+}
+.testimonials .section-title{
+/* color: white; */
 }
 
 .test-grid {
@@ -30,7 +35,7 @@
   background: rgba(255, 255, 255, 0.217);
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid #0aa7ea;
+  border: 1px solid white;
   transition: 0.3s ease;
 }
 
@@ -39,14 +44,14 @@
 }
 
 .test-card p {
-  color: #fff;
+  /* color: #fff; */
   line-height: 1.7;
   font-size: 16px;
 }
 
 .test-card h4 {
   margin-top: 15px;
-  color: #0aa7ea;
+  /* color: #0aa7ea; */
   font-size: 20px;
 }
 

@@ -1,7 +1,7 @@
 .experience {
   padding: 50px 10%;
   text-align: center;
-  background: linear-gradient(45deg, #1215dd77, #06962a);
+  /* background: linear-gradient(45deg, #1215dd77, #06962a); */
 
 }
 
@@ -14,19 +14,16 @@
 
 .experience .section-title {
   font-size: 36px;
-  color: white;
+  /* color: white; */
   margin-bottom: 30px;
 }
 
-.exp-card { 
-  background: rgba(223, 221, 221, 0.269);
+.exp-card {
+  background: rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(10px);
   padding: 25px;
   border-radius: 20px;
-  border-left: 6px solid white;
-  /* border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white; */
+  border-left: 6px solid #06962a;
   text-align: left;
   opacity: 0;
   transform: translateY(30px);
@@ -35,14 +32,14 @@
 }
 
 .exp-card h3 {
-  color: white;
+  /* color: white; */
 }
 
 .exp-card span {
-  color: white;
+  /* color: white; */
   font-size: 14px;
 }
 
 .exp-card p {
-  color: white;
+  /* color: white; */
 }

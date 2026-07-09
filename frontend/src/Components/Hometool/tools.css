@@ -8,7 +8,8 @@
   max-width: 400px;
   margin: 20px auto;
   padding: 100px 20px;
-  background: #ffffff;
+  background: #ffffff2e;
+  border: 1px solid white;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -33,9 +34,9 @@
 /* BUTTON */
 .button {
   padding: 10px 15px;
-  background: #4a90e2;
+  background: #4ae24ce6;
   color: #ffffff;
-  border: none;
+  border: 1px solid white;
   margin-top: 10px;
   border-radius: 8px;
   cursor: pointer;
@@ -86,7 +87,7 @@
 
 /* BOX */
 .box {
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
   padding: 20px;
   font-size: 20px;
   border-radius: 8px;
@@ -114,7 +115,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  background: #f9fafb;
+  /* background: #f9fafb; */
   transition: 0.3s;
 }
 

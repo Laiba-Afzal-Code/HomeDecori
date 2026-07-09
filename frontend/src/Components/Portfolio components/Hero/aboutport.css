@@ -11,20 +11,20 @@
 }
 
 .about-card {
-  background: linear-gradient(145deg, rgba(56,189,248,0.1), rgba(99,102,241,0.1));
+  background: linear-gradient(145deg, rgba(56, 191, 248, 0.269), rgba(99,102,241,0.1));
   padding: 20px;
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.155);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .about-card h2 {
-  color: #0bc63a;
+  /* color: #0bc63a; */
   margin-bottom: 15px;
 }
 
 .about-card p {
-  color: #96999c;
+  /* color: #96999c; */
   line-height: 1.6;
 }
 
@@ -35,24 +35,24 @@
 }
 
 .stats h3 {
-  color: #0bc63a;
+  /* color: #0bc63a; */
   font-size: 24px;
 }
 
 .stats p {
-  color: #94a3b8;
+  /* color: #94a3b8; */
 }
 
 .glass-box {
-  background: linear-gradient(45deg, #0bc63ac8, #6365f194);
+  background: linear-gradient(45deg, #0bc63a99, #6365f175);
   padding: 30px;
   border-radius: 15px;
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid rgb(245, 247, 248);
 }
 
 .glass-box h3 {
-  color: #06962a;
-  color: white;
+  /* color: #06962a; */
+  /* color: white; */
   margin-bottom: 15px;
   font-size: 24px;
 }
@@ -67,7 +67,7 @@
 
 .glass-box ul li {
   /* padding: 8px 0; */
-  color: #dadddf;
+  /* color: #dadddf; */
   font-size: 16px;
   margin:0px;
   display: flex;

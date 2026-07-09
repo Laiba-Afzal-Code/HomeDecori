@@ -2,13 +2,13 @@
   padding: 100px 10%;
   text-align: center;
   margin: 100px;
-  background: linear-gradient(45deg, #06962a, #1618b1);
-   background: linear-gradient(45deg, #0bc63ac8, #6365f194);
+  /* background: linear-gradient(45deg, #06962a, #1618b1);
+   background: linear-gradient(45deg, #0bc63ac8, #6365f194); */
   border-radius: 68px 0px;
 }
 .education .section-title {
   font-size: 36px;
-  color: white;
+  /* color: white; */
   margin-bottom: 30px;
 }
 .edu-container {
@@ -29,7 +29,8 @@
   border: 1px solid white;
   text-align: left;
   opacity: 0;
-  color: white;
+  /* color: white; */
+  box-shadow:20px  15px 20px 10px rgba(56, 56, 56, 0.342);
 }
 
 .edu-card h3, p {
