@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./heroport.css";
 import Typed from "typed.js";
-// import Scene from "../Scene";
+import Scene from "../Scene";
 
 function Hero() {
 
@@ -80,7 +80,7 @@ function Hero() {
 
       </div>
 
-      {/* <Scene /> */}
+      <Scene />
       <div className="Heroport-glow">
       </div>
     </section>
