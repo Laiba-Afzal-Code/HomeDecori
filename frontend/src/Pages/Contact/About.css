@@ -1,7 +1,7 @@
 .about-page {
   width: 100%;
   font-family: "Poppins", sans-serif;
-  color: #222;
+  /* color: #222; */
   padding: 100px 0px;
   /* background-color: white; */
 
@@ -155,10 +155,6 @@
   border: 1px solid white;
 }
 
-.about-page {
-  font-family: "Segoe UI", sans-serif;
-  color: #1f2937;
-}
 
 /* Hero Section */
 .abouthero {
