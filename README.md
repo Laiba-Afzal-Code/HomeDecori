@@ -3,11 +3,36 @@
 Home Decorim is a modern web application that helps users explore, design, and visualize beautiful home interiors. The platform provides tools for room decoration ideas, AI-assisted design suggestions, and blog content about home decor and interior design trends.
 
 The goal of Home Decorim is to make interior design inspiration and tools accessible for everyone—from homeowners looking for ideas to designers showcasing creative concepts.
+## Best Part
+Please visit my personal website: **homedecorim.com** — a project that I designed and developed completely by myself.
+
+This website represents my journey in web development, where I worked on:
+
+* React.js frontend development
+* JavaScript and modern CSS designs
+* Node.js & Express backend
+* MongoDB Atlas database integration
+* Email functionality with Nodemailer
+* GitHub deployment and cloud hosting
+* AI tools and features
+* User authentication and admin dashboard
+* Home decor tools and much more
+
+I have also added my **Portfolio Page** to the website, showcasing my development projects, skills, and experience.
+
+This is my first complete website built independently, and it has been an amazing learning experience — from designing UI/UX to writing code, fixing errors, deploying to the cloud, and managing the full-stack application.
+
+You can also explore my articles about **home decor ideas, interior design tips, furniture guides, and useful home tools**.
+
+Visit now: **homedecorim.com**
+
+A small step in my development journey, with many more projects coming soon. 🚀
+
+Best of luck to me and to everyone building something of their own! 😊
 
 ---
-
 ## Features
-
+www.homedecorim.com
 ### AI Room Design Tool
 
 Users can generate interior design concepts by uploading room images or describing their desired style.
