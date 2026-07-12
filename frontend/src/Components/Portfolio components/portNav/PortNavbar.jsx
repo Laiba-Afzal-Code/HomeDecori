@@ -1,5 +1,5 @@
 import React from "react";
-import "./portnav.css";
+import "./Portnav.css";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (

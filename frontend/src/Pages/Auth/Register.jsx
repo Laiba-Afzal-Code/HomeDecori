@@ -2,17 +2,19 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { register } from "../../utils/authService.js";
 import "./auth.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 import {
   FaHome,
   FaCouch,
   FaChair,
- 
+  
   FaBlogger,
 } from "react-icons/fa";
 
 export default function Register() {
+  const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,7 +44,7 @@ export default function Register() {
         <FaBlogger className="icon blogicon" />
       </div>
       <form className="auth-card" onSubmit={handleSubmit}>
-        <h2>Create User Account</h2>
+        <h2 className="authh2">Create User Account</h2>
         {error && <div className="auth-error">{error}</div>}
 
         <input
@@ -60,14 +62,30 @@ export default function Register() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-
+{/* 
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        />
+        /> */}
+        <div className="input-box">
+  <input
+    type={showPassword ? "text" : "password"}
+    placeholder="Password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    required
+  />
+
+  <span
+    className="eye-icon"
+    onClick={() => setShowPassword(!showPassword)}
+  >
+    {showPassword ? <FaEyeSlash /> : <FaEye />}
+  </span>
+</div>
 
         <button>Create Account</button>
 

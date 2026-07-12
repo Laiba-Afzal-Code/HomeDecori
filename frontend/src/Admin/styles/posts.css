@@ -1,6 +1,6 @@
 .admin-posts {
   padding: 30px;
-  background: #f8f9fb;
+  /* background: #f9fb; */
 }
 
 .page-header {
@@ -12,16 +12,17 @@
 
 .page-header h1 {
   font-size: 26px;
-  color: #132b09;
+  /* color: #132b09; */
 }
 
 .btn.primary {
-  background: #132b09;
+  background: #388b14;
   color: #fff;
   padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
+  border: 1px solid white;
 }
 
 .toolbar {
@@ -37,7 +38,7 @@
 }
 
 .table-wrapper {
-  background: #fff;
+  /* background: #fff; */
   border-radius: 10px;
   overflow-x: auto;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -58,7 +59,7 @@
   font-family: "Lato";
 }
 .posts-table th {
-  background: #f1f3f6;
+  /* background: #f1f3f6; */
   font-weight: 600;
 }
 
@@ -84,6 +85,7 @@
   height: 50px;
   border-radius: 50%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid white;
 }
 .actions {
   display: flex;

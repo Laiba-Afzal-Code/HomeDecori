@@ -16,9 +16,9 @@ export default function Sidebar() {
       <nav>
         <NavLink to="dashboard">📊Dashboard</NavLink>
         <NavLink to="posts">📝Posts</NavLink>
-        <NavLink to="users">👤Users</NavLink>
+        <NavLink to="users">👨‍🎓Users</NavLink>
         <NavLink to="categories">🗂️Categories</NavLink>
-        <NavLink to="settings">🧑‍💼Profile</NavLink>
+        <NavLink to="settings">🎓Profile</NavLink>
         <NavLink to={"/"}>⭐View Site</NavLink>
         <NavLink to={"/login"} className="" onClick={handleLogout}>
           🚪 LogOut

@@ -55,7 +55,7 @@ export default function Dashboard() {
 
       {/* Stats */}
       <div className="dashboard-grid">
-        <StatsCard title="Total Users" value={stats.users} icon="👤" />
+        <StatsCard title="Total Users" value={stats.users} icon="👨‍💼" />
         <StatsCard title="Total Posts" value={stats.posts} icon="📝" />
         <StatsCard title="Active Today" value={stats.active} icon="⚡" />
       </div>

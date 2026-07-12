@@ -4,6 +4,7 @@ import "./auth.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 export default function CreateAdmin() {
   const [form, setForm] = useState({
     name: "",
@@ -11,7 +12,9 @@ export default function CreateAdmin() {
     password: "",
     secret: "",
   });
-   const navigate = useNavigate();
+  const navigate = useNavigate();
+  
+  const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
@@ -26,7 +29,7 @@ export default function CreateAdmin() {
       await createAdmin(form);
       setMessage("Admin created successfully");
       toast.info("Admin Created Successfully")
-       navigate("/admin");
+      navigate("/admin");
     } catch (err) {
       setMessage(err.response?.data?.message || "Failed to create admin");
     }
@@ -34,15 +37,31 @@ export default function CreateAdmin() {
 
   return (
     <div className="auth-container">
-     
+
       <form className="auth-card" onSubmit={handleSubmit}>
-        <h2>Create Admin</h2>
+        <h2 className="authh2">Create Admin</h2>
 
         {message && <div className="auth-info">{message}</div>}
 
         <input name="name" placeholder="Name" onChange={handleChange} />
         <input name="email" placeholder="Email" onChange={handleChange} />
-        <input name="password" placeholder="Password" type="password" onChange={handleChange} />
+        {/* <input name="password" placeholder="Password" type="password" onChange={handleChange} /> */}
+        <div className="input-box">
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+           name='password'
+           onChange={handleChange}
+            required
+          />
+
+          <span
+            className="eye-icon"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
+        </div>
         <input name="secret" placeholder="Admin Secret" onChange={handleChange} />
 
         <button>Create Admin</button>

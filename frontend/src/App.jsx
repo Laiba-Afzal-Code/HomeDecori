@@ -36,6 +36,8 @@ import Portfolio from "./Pages/PortfolioPage/PortfolioPage.jsx";
 import ScrollProgress from "./Components/Portfolio components/ThemeToggle/ScrollProgress.jsx";
 import Scene2 from './Components/Scene2.jsx'
 import ThemeToggle from "./Components/Portfolio components/ThemeToggle/ThemeToggle.jsx";
+import ResetPassword from './Pages/Auth/ResetPassword.jsx'
+import ForgotPassword from "./Pages/Auth/ForgotPassword.jsx";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -66,6 +68,8 @@ function App() {
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/category/:category" element={<CategoryPosts />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword/>} />
+          <Route path="/reset-password/:token" element={<ResetPassword/>}/>
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

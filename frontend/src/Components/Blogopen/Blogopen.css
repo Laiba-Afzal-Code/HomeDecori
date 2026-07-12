@@ -108,7 +108,7 @@ h3 {
   overflow-wrap: break-word;
   font-family: "Lato", sans-serif;
   max-width: 90%;
-  color: #132b09;
+  /* color: #132b09; */
   background-color: none;
 }
 

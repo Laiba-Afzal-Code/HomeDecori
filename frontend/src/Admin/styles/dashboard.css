@@ -1,6 +1,6 @@
 .dashboard {
   padding: 30px;
-  background: #f8f9fb;
+  /* background: #f8f9fb; */
   min-height: 100vh;
 }
 
@@ -10,16 +10,16 @@
 
 .dashboard-header h1 {
   font-size: 28px;
-  color: #132b09;
+  /* color: #132b09; */
   font-family: "Poppins", "Lato", sans-serif;
 }
 
 .dashboard-header p {
-  color: #666;
+  /* color: #666; */
   font-size: 16px;
   font-weight: 600;
   margin-top: 4px;
-  font-family:  "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .dashboard-grid {
@@ -30,8 +30,10 @@
 }
 
 .stats-card {
-  background: #fff;
+  background: #ffffff1b;
   border-radius: 14px;
+
+  border: 1px solid #ddd;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -45,20 +47,22 @@
 
 .stats-title {
   font-size: 14px;
-  color: #666;
+  /* color: #666; */
   font-family: "Poppins", "Lato", sans-serif;
 }
 
 .stats-value {
   font-size: 26px;
-  color: #132b09;
+  /* color: #132b09; */
   margin-top: 4px;
-  
+
   font-family: "Poppins", "Lato", sans-serif;
 }
 
 .chart-box {
-  background: #fff;
+  background: linear-gradient(45deg, rgba(114, 200, 215, 0.578), rgba(2, 92, 2, 0.372));
+  background: #0bbd015b;
+  border: 1px solid #ddd;
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);

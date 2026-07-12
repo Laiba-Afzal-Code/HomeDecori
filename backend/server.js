@@ -21,13 +21,14 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 connectDB();
 const app = express();
+app.set("trust proxy", true);
+
 app.use(cors());
 app.use(cors({
  origin: "*"
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // add this too
-
 // ⭐ VERY IMPORTANT (serve images)
 app.use("/uploads", express.static("uploads"));
 

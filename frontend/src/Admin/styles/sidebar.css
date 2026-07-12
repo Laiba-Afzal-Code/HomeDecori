@@ -4,9 +4,10 @@
   top: 0;
   width: 250px;
   height: 100vh;
-  background: #0f172a;
+  background: #0f172acd;
   color: white;
   padding: 30px 20px;
+  border-right: 2px solid white;
 }
 .logoadmin {
   display: flex;

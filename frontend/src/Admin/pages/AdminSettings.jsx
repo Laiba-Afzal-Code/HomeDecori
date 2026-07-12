@@ -75,7 +75,7 @@ export default function AdminSettings() {
 
  <Link to={"/admin/create-admin"}>
         <button className="btn secondary">
-          🧑‍💼New Admin
+          👩‍💻New Admin
         </button>
  </Link>
         <button className="btn danger" onClick={handleLogout}>

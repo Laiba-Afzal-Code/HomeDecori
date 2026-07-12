@@ -7,7 +7,7 @@
 .admin-users-page table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
@@ -27,5 +27,5 @@
 }
 
 .admin-users-page tr:hover {
-  background: #f8f9fb;
+  /* background: #f8f9fb; */
 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../utils/authService.js";
 import "./auth.css";
-
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaHome, FaCouch, FaChair, FaArrowLeft, FaBlogger } from "react-icons/fa";
 import { toast } from "react-toastify";
 export default function Login() {
@@ -11,6 +11,7 @@ export default function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +46,7 @@ export default function Login() {
          <FaBlogger className="icon blogicon"/>
       </div>
       <form className="auth-card" onSubmit={handleSubmit}>
-        <h2>Admin / User Login</h2>
+        <h2 className="authh2">Admin / User Login</h2>
         {error && <div className="auth-error">{error}</div>}
 
         <input
@@ -56,13 +57,32 @@ export default function Login() {
           required
         />
 
-        <input
+        {/* <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-        />
+        /> */}
+       <div className="input-box">
+  <input
+    type={showPassword ? "text" : "password"}
+    placeholder="Password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    required
+  />
+
+  <span
+    className="eye-icon"
+    onClick={() => setShowPassword(!showPassword)}
+  >
+    {showPassword ? <FaEyeSlash /> : <FaEye />}
+  </span>
+</div>
+<p className="forgot-password">
+  <Link to="/forgot-password">Forgot Password?</Link>
+</p>
 
         <button disabled={loading}>
           {loading ? "Signing in..." : "Login"}

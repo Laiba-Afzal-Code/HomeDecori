@@ -1,44 +1,85 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
-const userSchema = new mongoose.Schema(
-  {
-    name: { type: String, required: true },
-    email: { type: String, unique: true, required: true },
-    password: {
-      type: String,
-      required: true,
-      select: false,
-    },
-    role: {
-      type: String,
-      enum: ["admin", "user"],
-      default: "user",
-    },
-    lastLogin: {
-      type: Date,
-    },
-  },
-  { timestamps: true }
-);
 
-// userSchema.pre("save", async function (next) {
-//   try {
-//     if (!this.isModified("password")) return next();
-//     this.password = await bcrypt.hash(this.password, 10);
-//     next();
-//   } catch (err) {
-//     next(err); // pass errors to Mongoose
-//   }
-// });
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password, 10);
-  // next();
+const userSchema = new mongoose.Schema(
+{
+  name:{
+    type:String,
+    required:true,
+  },
+
+
+  email:{
+    type:String,
+    required:true,
+    unique:true,
+  },
+
+
+  password:{
+    type:String,
+    required:true,
+    select:false,
+  },
+
+
+  role:{
+    type:String,
+    enum:["admin","user"],
+    default:"user",
+  },
+
+
+  lastLogin:{
+    type:Date,
+  },
+
+
+  resetToken:{
+    type:String,
+  },
+
+
+  resetTokenExpire:{
+    type:Date,
+  }
+
+},
+{
+  timestamps:true
 });
 
-userSchema.methods.comparePassword = function (password) {
-  return bcrypt.compare(password, this.password);
+
+
+// Password Hash
+userSchema.pre("save", async function(){
+
+  if(!this.isModified("password")){
+    return;
+  }
+
+  this.password = await bcrypt.hash(
+    this.password,
+    10
+  );
+
+});
+
+
+
+// Compare Password
+userSchema.methods.comparePassword = function(password){
+
+  return bcrypt.compare(
+    password,
+    this.password
+  );
+
 };
 
-export default mongoose.model("User", userSchema);
+
+export default mongoose.model(
+  "User",
+  userSchema
+);
