@@ -4,7 +4,7 @@ Home Decorim is a modern web application that helps users explore, design, and v
 
 The goal of Home Decorim is to make interior design inspiration and tools accessible for everyone—from homeowners looking for ideas to designers showcasing creative concepts.
 ## Best Part
-Please visit my personal website: **homedecorim.com** — a project that I designed and developed completely by myself.
+Please visit my personal website: **www.homedecorim.com** — a project I designed and developed myself entirely.
 
 This website represents my journey in web development, where I worked on:
 
@@ -24,7 +24,7 @@ This is my first complete website built independently, and it has been an amazin
 
 You can also explore my articles about **home decor ideas, interior design tips, furniture guides, and useful home tools**.
 
-Visit now: **homedecorim.com**
+Visit now: **www.homedecorim.com**
 
 A small step in my development journey, with many more projects coming soon. 🚀
 
